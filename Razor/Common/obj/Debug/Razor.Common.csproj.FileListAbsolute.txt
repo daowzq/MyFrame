@@ -1,0 +1,5 @@
+D:\Frame\Razor\Common\bin\Debug\Razor.Common.dll
+D:\Frame\Razor\Common\bin\Debug\Razor.Common.pdb
+D:\Frame\Razor\Common\obj\Debug\Razor.Common.csprojResolveAssemblyReference.cache
+D:\Frame\Razor\Common\obj\Debug\Razor.Common.dll
+D:\Frame\Razor\Common\obj\Debug\Razor.Common.pdb

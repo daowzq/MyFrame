@@ -1,0 +1,5 @@
+D:\Frame\Razor\DynamicJson\bin\Debug\DynamicJson.dll
+D:\Frame\Razor\DynamicJson\bin\Debug\DynamicJson.pdb
+D:\Frame\Razor\DynamicJson\obj\Debug\DynamicJson.csprojResolveAssemblyReference.cache
+D:\Frame\Razor\DynamicJson\obj\Debug\DynamicJson.dll
+D:\Frame\Razor\DynamicJson\obj\Debug\DynamicJson.pdb

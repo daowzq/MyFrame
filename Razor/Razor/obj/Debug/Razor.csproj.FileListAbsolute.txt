@@ -1,0 +1,2 @@
+D:\Frame\Razor\Razor\bin\Debug\Razor.exe.config
+D:\Frame\Razor\Razor\bin\Debug\TestFrame.exe.config
