@@ -8,3 +8,4 @@ D:\Frame\MyFrame\Razor\Common\bin\Debug\Razor.pdb
 D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
 D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.dll
 D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.pdb
+D:\Frame\MyFrame\Razor\Common\bin\Debug\itextsharp.dll
