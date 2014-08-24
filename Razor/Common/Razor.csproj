@@ -119,9 +119,12 @@
     <Compile Include="OpenSmtp\Smtp.cs" />
     <Compile Include="OpenSmtp\SmtpConfig.cs" />
     <Compile Include="OpenSmtp\SmtpException.cs" />
+    <Compile Include="Razor.cs" />
     <Compile Include="SecurityHelper.cs" />
+    <Compile Include="Serializer.cs" />
     <Compile Include="StringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysDiagnose.cs" />
     <Compile Include="SysInfoHelper.cs" />
     <Compile Include="XmlHelper.cs" />
   </ItemGroup>
