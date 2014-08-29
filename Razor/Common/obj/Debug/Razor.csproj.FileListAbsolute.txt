@@ -9,3 +9,8 @@ D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cac
 D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.dll
 D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.pdb
 D:\Frame\MyFrame\Razor\Common\bin\Debug\itextsharp.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.ActiveRecord.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\NHibernate.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.Components.Validator.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.Core.dll
+D:\Frame\MyFrame\Razor\Common\bin\Debug\NHibernate.Search.dll

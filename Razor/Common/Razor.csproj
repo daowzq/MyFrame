@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.ActiveRecord">
+      <HintPath>..\library\Castle.ActiveRecord.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\library\itextsharp.dll</HintPath>
     </Reference>
@@ -38,12 +41,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\library\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataHelper\DataHelper.cs" />
+    <Compile Include="DataHelper\EntityBase.cs" />
+    <Compile Include="DataHelper\Other.cs" />
     <Compile Include="DataTableToPdf.cs" />
     <Compile Include="DynamicJson\Bson\BsonConvert.cs" />
     <Compile Include="DynamicJson\Bson\BsonDeserializer.cs" />
