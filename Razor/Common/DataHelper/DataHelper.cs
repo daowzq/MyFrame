@@ -179,8 +179,7 @@ namespace Razor.DataHelper
 
         public static IDbConnection GetCurrentDbConnection(Type arBaseType)
         {
-          return ActiveRecordMediator.GetSessionFactoryHolder().GetSessionFactory(arBaseType).OpenStatelessSession().Connection;
-
+            return ActiveRecordMediator.GetSessionFactoryHolder().GetSessionFactory(arBaseType).OpenStatelessSession().Connection;
         }
 
         public static DataTable GetDataSchema(string tableName)
@@ -233,6 +232,22 @@ namespace Razor.DataHelper
             }
         }
 
+        //public static IList<KeyValuePairList> HqlQueryKeyValuesList(string hql, params object[] parameters)
+        //{
+        //    IList<object[]> list = HqlQueryObjectsList(hql, parameters);
+        //    string[] columnNames = QueryBuilder.GetColumnNames(hql);
+        //    IList<KeyValuePairList> list2 = new List<KeyValuePairList>();
+        //    foreach (object[] objArray in list)
+        //    {
+        //        KeyValuePairList item = new KeyValuePairList();
+        //        for (int i = 0; i < objArray.Length; i++)
+        //        {
+        //            item.Add(new KeyValuePair<string, object>(columnNames[i], objArray[i]));
+        //        }
+        //        list2.Add(item);
+        //    }
+        //    return list2;
+        //}
 
         public static IList HqlQueryList(string hql, params object[] parameters)
         {
@@ -297,7 +312,29 @@ namespace Razor.DataHelper
             GetHqlQuery(session, hql, parameters).ExecuteUpdate();
         }
 
-       
+        public static T MergeData<T>(T entity1, T entity2) where T : EntityBase<T>
+        {
+            foreach (PropertyInfo info in EntityBase<T>.AllProperties)
+            {
+                if (info.CanWrite)
+                {
+                    info.SetValue(entity1, info.GetValue(entity2, null), null);
+                }
+            }
+            return entity1;
+        }
+
+        public static T MergeData<T>(T entity1, T entity2, ICollection<string> keys) where T : EntityBase<T>
+        {
+            foreach (PropertyInfo info in EntityBase<T>.AllProperties)
+            {
+                if (info.CanWrite && keys.Contains(info.Name))
+                {
+                    info.SetValue(entity1, info.GetValue(entity2, null), null);
+                }
+            }
+            return entity1;
+        }
 
         public static ISession OpenHqlSession()
         {
@@ -494,7 +531,4 @@ namespace Razor.DataHelper
             }
         }
     }
-
-
-
 }
