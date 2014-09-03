@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataHelper\RazorIdentifierGenerator.cs" />
     <Compile Include="DataHelper\DataHelper.cs" />
     <Compile Include="DataHelper\EntityBase.cs" />
     <Compile Include="DataHelper\EntityManager.cs" />

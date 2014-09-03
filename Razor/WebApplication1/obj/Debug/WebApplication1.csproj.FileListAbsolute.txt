@@ -14,3 +14,5 @@ D:\Frame\MyFrame\Razor\WebApplication1\bin\NHibernate.Search.dll
 D:\Frame\MyFrame\Razor\WebApplication1\bin\Razor.pdb
 D:\Frame\MyFrame\Razor\WebApplication1\bin\Iesi.Collections.dll
 D:\Frame\MyFrame\Razor\WebApplication1\bin\log4net.dll
+D:\Frame\MyFrame\Razor\WebApplication1\bin\TestModel.dll
+D:\Frame\MyFrame\Razor\WebApplication1\bin\TestModel.pdb

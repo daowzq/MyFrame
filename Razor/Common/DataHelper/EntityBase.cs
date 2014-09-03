@@ -170,8 +170,6 @@ namespace Razor.DataHelper
             return default(T);
         }
 
-
-
         public static T[] FindAll(SearchCriterion criterion)
         {
             return EntityBase<T>.FindAllByCriterion(criterion as HqlSearchCriterion, new ICriterion[0]);

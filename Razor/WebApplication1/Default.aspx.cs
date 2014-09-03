@@ -16,11 +16,7 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        IConfigurationSource source = System.Configuration.ConfigurationSettings.GetConfig("activerecord") as IConfigurationSource;
-        ActiveRecordStarter.Initialize(source, typeof(SurveyedResult));
-
-        Response.Write(SurveyedResult.FindAll().Length);
-        Response.End();
-
+        SurveyedResult[] arr = SurveyedResult.FindAll();
+        Response.Write(arr.Length);
     }
 }

@@ -1,0 +1,14 @@
+D:\Frame\MyFrame\Razor\TestModel\obj\Debug\TestModel.csprojResolveAssemblyReference.cache
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\TestModel.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\TestModel.pdb
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\Castle.ActiveRecord.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\Newtonsoft.Json.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\NHibernate.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\Razor.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\itextsharp.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\Castle.Components.Validator.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\Castle.Core.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\NHibernate.Search.dll
+D:\Frame\MyFrame\Razor\TestModel\bin\Debug\Razor.pdb
+D:\Frame\MyFrame\Razor\TestModel\obj\Debug\TestModel.dll
+D:\Frame\MyFrame\Razor\TestModel\obj\Debug\TestModel.pdb

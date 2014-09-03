@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="ValidCode.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -75,6 +76,9 @@
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ModelOR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +99,10 @@
     <ProjectReference Include="..\Common\Razor.csproj">
       <Project>{e2d4cdfb-2816-44cb-a69b-5b2074cc17e4}</Project>
       <Name>Razor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestModel\TestModel.csproj">
+      <Project>{21675b28-5198-45a9-b078-8af3923cd882}</Project>
+      <Name>TestModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
