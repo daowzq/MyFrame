@@ -16,3 +16,4 @@ D:\Frame\MyFrame\Razor\WebApplication1\bin\Iesi.Collections.dll
 D:\Frame\MyFrame\Razor\WebApplication1\bin\log4net.dll
 D:\Frame\MyFrame\Razor\WebApplication1\bin\TestModel.dll
 D:\Frame\MyFrame\Razor\WebApplication1\bin\TestModel.pdb
+D:\Frame\MyFrame\Razor\WebApplication1\bin\NHibernate.ByteCode.Castle.dll

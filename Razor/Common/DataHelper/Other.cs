@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Permissions;
 using System.Text;
 
-namespace Razor.DataHelper
+namespace Razor.Data
 {
     public delegate void RazorPropertyChangedEventHandler(object sender, RazorPropertyChangedEventArgs e);
     public interface IAimNotifyPropertyChanged

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Newtonsoft.Json;
 using Castle.ActiveRecord;
-using Razor.DataHelper;
+using Razor.Data;
 
 namespace TestModel
 {

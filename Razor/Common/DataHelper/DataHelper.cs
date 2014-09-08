@@ -12,7 +12,7 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 
-namespace Razor.DataHelper
+namespace Razor.Data
 {
     public class DataHelper
     {

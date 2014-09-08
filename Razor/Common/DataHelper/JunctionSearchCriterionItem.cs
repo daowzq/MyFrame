@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Razor.DataHelper
+namespace Razor.Data
 {
     public enum JunctionMode
     {

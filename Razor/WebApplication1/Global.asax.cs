@@ -1,5 +1,5 @@
 ﻿using Razor;
-using Razor.DataHelper;
+using Razor.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +27,7 @@ namespace WebApplication1
         public void ApplicationStartInit()
         {
 
+            //获取当前程序集
             Assembly[] assemblies = new Assembly[] { Assembly.GetExecutingAssembly() };
             Assembly[] exAssemblies = ObjectHelper.GetAssemblysByNames(new string[] { "TestModel" });
 

@@ -10,7 +10,7 @@ using System.IO;
 using NHibernate.Criterion;
 using PostSharp;
 
-namespace Razor.DataHelper
+namespace Razor.Data
 {
     [Serializable]
     public abstract class EntityBase<T> : ActiveRecordBase<T>, IAimNotifyPropertyChanged where T : EntityBase<T>
@@ -286,6 +286,12 @@ namespace Razor.DataHelper
         }
 
         #endregion
+
+        event RazorPropertyChangedEventHandler IAimNotifyPropertyChanged.RazorPropertyChanged
+        {
+            add { throw new NotImplementedException(); }
+            remove { throw new NotImplementedException(); }
+        }
     }
 }
 

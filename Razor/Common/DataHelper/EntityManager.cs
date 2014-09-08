@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Razor.DataHelper
+namespace Razor.Data
 {
     public class EntityManager
     {
