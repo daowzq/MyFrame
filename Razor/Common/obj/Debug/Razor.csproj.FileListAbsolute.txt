@@ -14,3 +14,4 @@ D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.Components.Validator.dll
 D:\Frame\MyFrame\Razor\Common\bin\Debug\Castle.Core.dll
 D:\Frame\MyFrame\Razor\Common\bin\Debug\NHibernate.Search.dll
 D:\Frame\MyFrame\Razor\Common\bin\Debug\PostSharp.dll
+D:\Frame\MyFrame\Razor\Common\obj\Debug\Razor.csprojResolveAssemblyReference.cache
