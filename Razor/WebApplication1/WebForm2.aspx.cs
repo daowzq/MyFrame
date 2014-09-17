@@ -19,11 +19,9 @@ namespace WebApplication1
             _searchCriterion.GetRecordCount = true;
 
             SurveyQuestion[] arr = SurveyQuestion.FindAll(_searchCriterion);
-
             string str = Razor.JsonHelper.GetJsonString(arr);
             //   Response.Write(Razor.JsonHelper.GetJsonString(arr));
             Response.Write(str);
-
             // Response.Write("<br/>fasdfsdfasdf");
         }
     }
