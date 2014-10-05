@@ -28,11 +28,11 @@ namespace WebApplication1
         {
 
             //获取当前程序集
-            Assembly[] assemblies = new Assembly[] { Assembly.GetExecutingAssembly() };
-            Assembly[] exAssemblies = ObjectHelper.GetAssemblysByNames(new string[] { "TestModel" });
+            // Assembly[] assemblies = new Assembly[] { Assembly.GetExecutingAssembly() };
+            // Assembly[] exAssemblies = ObjectHelper.GetAssemblysByNames(new string[] { "TestModel" });
 
             // 初始化Entity
-            EntityManager.InitializeEntity(assemblies, exAssemblies, typeof(EntityBase<>));
+            // EntityManager.InitializeEntity(assemblies, exAssemblies, typeof(EntityBase<>));
 
         }
         protected void Application_BeginRequest(object sender, EventArgs e)

@@ -11,8 +11,6 @@
     <%-- <script src="Ext_4.2/ext-all.js"></script>--%>
     <script type="text/javascript">
         Ext.onReady(function () {
-
-
             Ext.define('FiledModel', {
                 extend: 'Ext.data.Model',
                 fields: [{
@@ -75,10 +73,10 @@
                     this.cellEditing = new Ext.grid.plugin.CellEditing({
                         clicksToEdit: 1
                     });
-
                     Ext.apply(this, {
-                        width: 800,
-                        height: 600,
+                        // width: 800,
+                        // height: 600,
+                        region: 'center',
                         plugins: [this.cellEditing],
                         store: new Ext.data.Store({
                             // destroy the store if the grid is destroyed
@@ -87,14 +85,16 @@
                             proxy: {
                                 type: 'ajax',
                                 // load remote data using HTTP
-                                url: 'plants.xml',
+                                url: '/json.js',
                                 // specify a XmlReader (coincides with the XML format of the returned data)
                                 reader: {
-                                    type: 'xml',
+                                    type: 'json',
                                     // records will have a 'plant' tag
                                     record: 'plant'
                                 }
                             },
+                            autoLoad: true,
+
                             sorters: [{
                                 property: 'common',
                                 direction: 'ASC'
@@ -176,27 +176,27 @@
 
                     this.callParent();
 
-                    this.on('afterlayout', this.loadStore, this, {
-                        delay: 1,
-                        single: true
-                    })
+                    //this.on('afterlayout', this, {
+                    //    delay: 1,
+                    //    single: true
+                    //})
                 },
 
-                loadStore: function () {
-                    this.getStore().load({
-                        // store loading is asynchronous, use a load listener or callback to handle results
-                        callback: this.onStoreLoad
-                    });
-                },
+                //loadStore: function () {
+                //    this.getStore().load({
+                //        // store loading is asynchronous, use a load listener or callback to handle results
+                //        //  callback: this.onStoreLoad
+                //    });
+                //},
 
-                onStoreLoad: function () {
-                    Ext.Msg.show({
-                        title: 'Store Load Callback',
-                        msg: 'store was loaded, data available for processing',
-                        icon: Ext.Msg.INFO,
-                        buttons: Ext.Msg.OK
-                    });
-                },
+                //onStoreLoad: function () {
+                //    Ext.Msg.show({
+                //        title: 'Store Load Callback',
+                //        msg: 'store was loaded, data available for processing',
+                //        icon: Ext.Msg.INFO,
+                //        buttons: Ext.Msg.OK
+                //    });
+                //},
 
                 onAddClick: function () {
                     // Create a model instance
