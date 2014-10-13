@@ -70,6 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BaseGrid.aspx" />
+    <Content Include="css\button.css" />
+    <Content Include="css\popuplayer.css" />
+    <Content Include="css\public.css" />
+    <Content Include="css\public_1.css" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="Ext_4.2\bootstrap.js" />
     <Content Include="Ext_4.2\build.xml" />
@@ -7036,11 +7041,56 @@
     <Content Include="Grid.aspx" />
     <Content Include="json.js" />
     <Content Include="plants.xml" />
+    <Content Include="SurveyUI\21.gif" />
+    <Content Include="SurveyUI\b.js" />
+    <Content Include="SurveyUI\base_utils.js" />
+    <Content Include="SurveyUI\button.css" />
+    <Content Include="SurveyUI\ckeditor.js" />
+    <Content Include="SurveyUI\dc.js" />
+    <Content Include="SurveyUI\demo.min.js" />
+    <Content Include="SurveyUI\dmuploader.min.js" />
+    <Content Include="SurveyUI\edit.js" />
+    <Content Include="SurveyUI\edit_init.js" />
+    <Content Include="SurveyUI\edit_utils.js" />
+    <Content Include="SurveyUI\enums.js" />
+    <Content Include="SurveyUI\h.js" />
+    <Content Include="SurveyUI\init.js" />
+    <Content Include="SurveyUI\Jcrop.css" />
+    <Content Include="SurveyUI\Jcrop.js" />
+    <Content Include="SurveyUI\jquery-migrate-1.2.1.js" />
+    <Content Include="SurveyUI\jquery-ui-1.10.min.js" />
+    <Content Include="SurveyUI\jquery.cookie.js" />
+    <Content Include="SurveyUI\jquery_1.10.2.min.js" />
+    <Content Include="SurveyUI\jsbox.css" />
+    <Content Include="SurveyUI\jsbox.js" />
+    <Content Include="SurveyUI\JsBubble.css" />
+    <Content Include="SurveyUI\JsBubble.js" />
+    <Content Include="SurveyUI\json.js" />
+    <Content Include="SurveyUI\juicer.js" />
+    <Content Include="SurveyUI\load.css" />
+    <Content Include="SurveyUI\load.js" />
+    <Content Include="SurveyUI\models.js" />
+    <Content Include="SurveyUI\modernizr.custom.js" />
+    <Content Include="SurveyUI\popuplayer.css" />
+    <Content Include="SurveyUI\public.css" />
+    <Content Include="SurveyUI\public.js" />
+    <Content Include="SurveyUI\q_template.js" />
+    <Content Include="SurveyUI\ssq.js" />
+    <Content Include="SurveyUI\style.css" />
+    <Content Include="SurveyUI\survey_utils.js" />
+    <Content Include="SurveyUI\zebra_datepicker.js" />
+    <Content Include="SurveyUI\zebra_datepicker_metallic.css" />
+    <Content Include="SurveyUI\问卷设计-你的上班有什么看法.htm" />
+    <Content Include="SurveyUI\问卷设计防晒霜看法.htm" />
     <Content Include="ValidCode.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="WebForm2.aspx" />
+    <Content Include="images\wjsj_toolico.png" />
+    <Content Include="images\wjsj_toolico_off.png" />
+    <Content Include="images\xjwn_index_button.png" />
+    <Content Include="问卷设计-你的上班有什么看法.htm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseGrid.aspx.cs">

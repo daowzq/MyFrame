@@ -35,10 +35,6 @@
                     }
                 }
             });
-
-            store.on("write", function () {
-                alert();
-            })
             //重新设置proxy
             var proxy = Ext.create("Ext.data.proxy.Ajax", {
                 url: '?action=qry',
@@ -91,8 +87,6 @@
                 region: "center",
                 renderTo: Ext.getBody()
             });
-
-
         })
     </script>
 
