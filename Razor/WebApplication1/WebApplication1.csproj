@@ -7091,6 +7091,7 @@
     <Content Include="images\wjsj_toolico_off.png" />
     <Content Include="images\xjwn_index_button.png" />
     <Content Include="问卷设计-你的上班有什么看法.htm" />
+    <Content Include="问卷设计.htm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseGrid.aspx.cs">
