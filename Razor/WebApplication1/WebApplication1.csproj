@@ -7040,6 +7040,7 @@
     <Content Include="Global.asax" />
     <Content Include="Grid.aspx" />
     <Content Include="json.js" />
+    <Content Include="juicer.aspx" />
     <Content Include="plants.xml" />
     <Content Include="SurveyUI\21.gif" />
     <Content Include="SurveyUI\b.js" />
@@ -7091,7 +7092,7 @@
     <Content Include="images\wjsj_toolico_off.png" />
     <Content Include="images\xjwn_index_button.png" />
     <Content Include="问卷设计-你的上班有什么看法.htm" />
-    <Content Include="问卷设计.htm" />
+    <Content Include="UI.htm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseGrid.aspx.cs">
@@ -7117,6 +7118,13 @@
     </Compile>
     <Compile Include="Grid.aspx.designer.cs">
       <DependentUpon>Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="juicer.aspx.cs">
+      <DependentUpon>juicer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="juicer.aspx.designer.cs">
+      <DependentUpon>juicer.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModelOR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

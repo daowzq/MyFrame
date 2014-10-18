@@ -195,76 +195,76 @@ function ajaxGet(obj) {
 }
 
 function ajaxPost(url, data, callback) {
-    //保存提示
-    var secure_key = $.cookie("_xsrf") || "";
-    if (isNotEmpty(secure_key)) {
-        data["_xsrf"] = secure_key;
-    }
-    var is_edit = url.indexOf("edit/ajax") != -1 ? true : false;
-    if (is_edit) {
-        if (typeof (client_uuid) !== "undefined") {
-            data["client_uuid"] = client_uuid;
-            SavePrompt();
-        }
-    }
-    $.ajax({
-        url: url,
-        data: data,
-        dataType: "JSON",
-        type: "POST",
-        success: function (ret) {
-            if (ret.status == "200") {
-                if (ret.hasOwnProperty("edit_valid")) {
-                    if (!ret.edit_valid) {
-                        edit_lock_alert();
-                        return;
-                    }
-                }
-                if (isNotEmpty(callback)) {
-                    callback(ret);
-                }
-                if (is_edit) {
-                    SavePrompt(true);
-                }
-            }
-        }
-    });
+    ////保存提示
+    //var secure_key = $.cookie("_xsrf") || "";
+    //if (isNotEmpty(secure_key)) {
+    //    data["_xsrf"] = secure_key;
+    //}
+    //var is_edit = url.indexOf("edit/ajax") != -1 ? true : false;
+    //if (is_edit) {
+    //    if (typeof (client_uuid) !== "undefined") {
+    //        data["client_uuid"] = client_uuid;
+    //        SavePrompt();
+    //    }
+    //}
+    //$.ajax({
+    //    url: url,
+    //    data: data,
+    //    dataType: "JSON",
+    //    type: "POST",
+    //    success: function (ret) {
+    //        if (ret.status == "200") {
+    //            if (ret.hasOwnProperty("edit_valid")) {
+    //                if (!ret.edit_valid) {
+    //                    edit_lock_alert();
+    //                    return;
+    //                }
+    //            }
+    //            if (isNotEmpty(callback)) {
+    //                callback(ret);
+    //            }
+    //            if (is_edit) {
+    //                SavePrompt(true);
+    //            }
+    //        }
+    //    }
+    //});
 }
 
 function syncPost(url, data, callback) {
-    //保存提示
-    var secure_key = $.cookie("_xsrf");
-    if (isNotEmpty(secure_key)) {
-        data["_xsrf"] = secure_key;
-    }
-    var is_edit = url.indexOf("edit/ajax") != -1 ? true : false;
-    if (is_edit) {
-        //  data["client_uuid"] = client_uuid;
-        //SavePrompt();
-    }
-    $.ajax({
-        url: url,
-        data: data,
-        dataType: "JSON",
-        type: "POST",
-        async: false,
-        success: function (ret) {
-            if (ret.status == "200") {
-                if (ret.hasOwnProperty("edit_valid")) {
-                    if (!ret.edit_valid) {
-                        edit_lock_alert();
-                        return;
-                    }
-                }
-                if (isNotEmpty(callback)) {
-                    callback(ret);
-                }
-            }
-            if (is_edit) {
-                SavePrompt(true);
-            }
-        }
-    });
+    ////保存提示
+    //var secure_key = $.cookie("_xsrf");
+    //if (isNotEmpty(secure_key)) {
+    //    data["_xsrf"] = secure_key;
+    //}
+    //var is_edit = url.indexOf("edit/ajax") != -1 ? true : false;
+    //if (is_edit) {
+    //    //  data["client_uuid"] = client_uuid;
+    //    //SavePrompt();
+    //}
+    //$.ajax({
+    //    url: url,
+    //    data: data,
+    //    dataType: "JSON",
+    //    type: "POST",
+    //    async: false,
+    //    success: function (ret) {
+    //        if (ret.status == "200") {
+    //            if (ret.hasOwnProperty("edit_valid")) {
+    //                if (!ret.edit_valid) {
+    //                    edit_lock_alert();
+    //                    return;
+    //                }
+    //            }
+    //            if (isNotEmpty(callback)) {
+    //                callback(ret);
+    //            }
+    //        }
+    //        if (is_edit) {
+    //            SavePrompt(true);
+    //        }
+    //    }
+    //});
 }
 
 function ajaxSubmit(obj) {

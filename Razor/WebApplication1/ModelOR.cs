@@ -87,7 +87,6 @@ namespace Model
         {
             get { return _id; }
             set { _id = value; } // 处理列表编辑时去掉注释
-
         }
 
         [Property("SurveyId", Access = PropertyAccess.NosetterCamelcaseUnderscore, Length = 50)]
@@ -115,9 +114,9 @@ namespace Model
                 {
                     object oldValue = _surveyName;
                     _surveyName = value;
+                    
                 }
             }
-
         }
 
         [Property("QuestionId", Access = PropertyAccess.NosetterCamelcaseUnderscore, Length = 500)]
@@ -130,9 +129,9 @@ namespace Model
                 {
                     object oldValue = _questionId;
                     _questionId = value;
+                    Console.WriteLine("");
                 }
             }
-
         }
 
         [Property("QuestionName", Access = PropertyAccess.NosetterCamelcaseUnderscore, Length = 3000)]
