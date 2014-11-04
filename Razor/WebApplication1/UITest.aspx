@@ -344,6 +344,10 @@
             min-height: 150px;
         }
 
+        .setup-group h4 {
+            text-align: center;
+        }
+
         .ui-sortable {
             margin-top: 20px;
         }
@@ -360,6 +364,10 @@
         .unstyled input[type='radio'], .unstyled input[type='checkbox'] {
             margin: 0px 5px 0px 0px;
             vertical-align: middle !important;
+        }
+
+        .module {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -572,7 +580,7 @@
                     </table>
 
                     <ul class="dragwen ui-sortable" id="question_box">
-                        <li class="module" issue="2" disp_type="vertical" cols_count="1">
+                        <li class="module">
                             <div class="topic_type">
                                 <div class="topic_type_menu">
                                     <div class="setup-group">
@@ -593,7 +601,30 @@
                                     <div class="operationH"><a href="javascript:;" style="display: block;"><i title="添加选项" class="add-icon-active"></i></a><a class="Bub" href="javascript:;" title="批量添加" style="display: block;"><i class="clone-icon-active"></i></a></div>
                                 </div>
                             </div>
-                            <div class="updown" style="display: block;"><a href="javascript:;"><i title="上移本题" class="up-icon-active"></i></a><a href="javascript:;"><i title="下移本题" class="down-icon-active"></i></a></div>
+                            <div class="updown" style="display: none;"><a href="javascript:;"><i title="上移本题" class="up-icon-active"></i></a><a href="javascript:;"><i title="下移本题" class="down-icon-active"></i></a></div>
+                        </li>
+                        <li class="module">
+                            <div class="topic_type">
+                                <div class="topic_type_menu">
+                                    <div class="setup-group">
+                                        <h4>Q2</h4>
+                                        <a class="Bub" href="javascript:;" title="题目设置" style="display: block;"><i class="setup-icon-active"></i></a><a class="Bub" href="javascript:;" title="逻辑设置" style="display: block;"><i class="link-icon-active"></i></a><a class="Bub" href="javascript:;" title="题目复制" style="display: block;"><i class="copy-icon-active"></i></a><a class="Del" href="javascript:;" title="题目删除" style="display: block;"><i class="del2-icon-active"></i></a>
+                                    </div>
+                                </div>
+                                <div class="topic_type_con">
+                                    <div class="Drag_area">
+                                        <div class="th4 T_edit q_title" name="question">多选题</div>
+                                    </div>
+                                    <ul class="unstyled ">
+                                        <li style="">
+                                            <input type="checkbox" name="radio" id="Radio1" value="option_543a2ef6f7405b41b6f77ca7" /><label class="T_edit_min" for="" name="option" id="Label1">选项1</label></li>
+                                        <li style="">
+                                            <input type="checkbox" name="radio" id="Radio2" value="option_543a2ef6f7405b41b6f77ca8" /><label class="T_edit_min" for="" name="option" id="Label2">选项2</label></li>
+                                    </ul>
+                                    <div class="operationH"><a href="javascript:;" style="display: block;"><i title="添加选项" class="add-icon-active"></i></a><a class="Bub" href="javascript:;" title="批量添加" style="display: block;"><i class="clone-icon-active"></i></a></div>
+                                </div>
+                            </div>
+                            <div class="updown" style="display: none;"><a href="javascript:;"><i title="上移本题" class="up-icon-active"></i></a><a href="javascript:;"><i title="下移本题" class="down-icon-active"></i></a></div>
                         </li>
                     </ul>
                 </div>
