@@ -5,370 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/mycss.css" rel="stylesheet" />
     <title></title>
     <style type="text/css">
-        body, input, textarea, select {
-            font-family: "微软雅黑";
-            font-size: 14px;
-            color: #666666;
-            background-color: #fff;
-        }
-
-        h1, h2, h3, h4, p, ul, ol, dl, dd, form {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: normal;
-        }
-
-        h4 {
-            font-size: 16px;
-        }
-
-            h4 a {
-                color: #717171;
-            }
-
-        a {
-            text-decoration: none;
-            display: block;
-            outline-width: medium;
-            outline-style: none;
-            outline-color: invert;
-        }
-
-        .wjContent {
-            width: 990px;
-            min-width: 990px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: white;
-        }
-
-        ul li {
-            list-style: none;
-            padding-left: 0px;
-        }
-
-        .rows1 {
-            margin-left: 12px;
-            width: 140px;
-            float: left;
-            display: inline;
-            border: 1px solid;
-            border-color: #e3e3e3;
-            background-color: rgb(245,245,245);
-            border-radius: 4px;
-        }
-
-        .well {
-            padding: 8px 8px;
-        }
-
-
-        .ul-tool {
-            margin-top: 5px;
-        }
-
-            .ul-tool li {
-                height: 24px;
-                line-height: 24px;
-                margin-bottom: 4px;
-                border-width: 1px 2px 2px 1px;
-                border-color: #dbdbdb;
-                border-style: solid;
-                background-color: rgb(255,255,255);
-            }
-
-                .ul-tool li a {
-                    padding: 0px 8px;
-                    display: block;
-                    color: #717171;
-                    text-decoration: none;
-                }
-
-                .ul-tool li i {
-                    margin-top: -3px;
-                    margin-right: 5px;
-                }
-
-        [class^='-icon'], [class*='-icon'] {
-            margin-right: 0px;
-            vertical-align: middle;
-            display: inline-block;
-            background-image: url("/images/wjsj_toolico_off.png");
-            background-repeat: no-repeat;
-        }
-
-        .fr li a:hover [class*='-icon'], .fr li a:focus [class*='-icon'], [class^='-icon-active'], [class*='-icon-active'] {
-            background-image: url("/images/wjsj_toolico.png");
-        }
-
-        .basic-too11-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -119px;
-        }
-
-        .basic-too12-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -140px;
-        }
-
-        .basic-too2013-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -650px;
-        }
-
-        .basic-too2014-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -650px;
-        }
-
-        .basic-too13-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -159px;
-        }
-
-        .basic-too200-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -377px;
-        }
-
-        .basic-too16-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -220px;
-        }
-
-        .basic-too15-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -200px;
-        }
-
-        .basic-too14-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -180px;
-        }
-
-        .basic-too17-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -240px;
-        }
-
-        .basic-too18-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -260px;
-        }
-
-        .basic-too19-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -280px;
-        }
-
-        .basic-too111-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -320px;
-        }
-
-        .basic-too112-icon-active {
-            width: 20px;
-            height: 20px;
-            background-position-x: 0px;
-            background-position-y: -340px;
-        }
-
-        .tc {
-            text-align: center;
-            text-decoration-style: none;
-        }
-
-        #accordion1 h4 i {
-            width: 12px;
-            height: 15px;
-            margin: 1px 0px 0px 5px;
-            vertical-align: middle;
-            display: inline-block;
-            background-image: url("/images/xjwn_index_button.png");
-            background-attachment: scroll;
-            background-repeat: no-repeat;
-            background-position-x: -364px;
-            background-position-y: -24px;
-            background-size: auto;
-            background-origin: padding-box;
-            background-color: transparent;
-        }
-
-        /*右边题干部分*/
-        .rows2 {
-            width: 805px;
-            float: right;
-            background-color: rgb(245,245,245);
-        }
-
-        .well2 {
-            padding: 0px 7px 10px 7px;
-            border: solid 1px #dbdbdb;
-        }
-
-        .h4-bg {
-            width: 100%;
-            text-align: center;
-            padding: 4px 0px 0px 0px;
-            font-size: 18px;
-            margin: 0px;
-            border-color: #fafafa;
-            border-width: 1px;
-            border-style: solid;
-            background-attachment: scroll;
-            background-size: auto;
-            background-origin: padding-box;
-            background-clip: border-box;
-            background-color: rgb(250,250,250);
-        }
-        /*公共部分*/
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            border-spacing: 0;
-            background-color: transparent;
-        }
-
-        .table1 {
-            width: 100%;
-            border-color: #dbdbdb;
-            border-width: 1px;
-            border-style: solid;
-        }
-
-        .bg-m.table1 {
-            margin-top: 10px;
-            background-image: none;
-            background-attachment: scroll;
-            background-repeat: repeat;
-            background-size: auto;
-            background-origin: padding-box;
-            background-clip: border-box;
-            background-color: #fff;
-        }
-
-        .table1 td {
-            padding: 8px;
-            vertical-align: top;
-        }
-
-        .table1 .rb {
-            width: 34px;
-            border-right-color: #dbdbdb;
-            border-right-width: 1px;
-            border-right-style: solid;
-        }
-
-        .th4 {
-            width: 600px;
-            padding: 6px 0px 0px 0px;
-            font-size: 16px;
-            min-height: 30px;
-        }
-
-        .dragwen {
-            padding: 0px;
-            margin: 0px;
-            list-style-type: none;
-            list-style-position: outside;
-            list-style-image: none;
-            position: relative;
-            min-height: 250px;
-        }
-
-            .dragwen > li {
-                width: 100%;
-                height: auto;
-                position: relative;
-                background-image: none;
-                background-attachment: scroll;
-                background-repeat: repeat;
-                background-size: auto;
-                background-origin: padding-box;
-                background-clip: border-box;
-                background-color: #fff;
-            }
-
-        .topic_type {
-            border-color: #dbdbdb;
-            border-width: 1px;
-            border-style: solid;
-            position: relative;
-        }
-
-        .topic_type_menu {
-            left: 0px;
-            top: 0px;
-            width: 50px;
-            padding: 8px 3px;
-            position: absolute;
-        }
-
-        .topic_type_con {
-            padding: 8px;
-            margin-left: 50px;
-            border-left-color: #dbdbdb;
-            border-left-width: 1px;
-            border-left-style: solid;
-            min-height: 150px;
-        }
-
-        .setup-group h4 {
-            text-align: center;
-        }
-
-        .ui-sortable {
-            margin-top: 20px;
-        }
-
-        input {
-            border: solid 1px #d2d2d2;
-        }
-
-        .unstyled li {
-            margin-top: 5px;
-            overflow: hidden;
-        }
-
-        .unstyled input[type='radio'], .unstyled input[type='checkbox'] {
-            margin: 0px 5px 0px 0px;
-            vertical-align: middle !important;
-        }
-
-        .module {
-            margin-bottom: 20px;
-        }
+      
     </style>
 </head>
 <body>
@@ -643,7 +283,7 @@
                                         <li>
                                             <div class="questionImgBox" name="545a2033f7405b328c3682c0">
                                                 <div class="QImgCon">
-                                                    <img src="./demo/545a2033f7405b328c3682c0_thumbnail.jpg" orig_width="800" bbox="" maxsrc="/static/img/survey/upload/543a2e85f7405b41c21c51f0/545a2033f7405b328c3682c0.jpg?v=7531ab97bd050c4232192732f9327d09">
+                                                    <img src="./demo/545a2033f7405b328c3682c0_thumbnail.jpg" orig_width="800" bbox="">
                                                 </div>
                                                 <input id="option_545a2033f7405b328c3682c0" name="radio" value="option_545a2033f7405b328c3682c0" type="radio"><label id="545a2033f7405b328c3682c0" class="T_edit_min" for="" name="option">图片1就会很会发个价格几乎U盾的Uuiyui快就hi就回家回家</label>
                                             </div>
@@ -651,9 +291,10 @@
                                         <li>
                                             <div class="questionImgBox" name="545a2033f7405b328c3682c0">
                                                 <div class="QImgCon">
-                                                    <img src="./demo/545a2033f7405b328c3682c0_thumbnail.jpg" orig_width="800" bbox="" maxsrc="/static/img/survey/upload/543a2e85f7405b41c21c51f0/545a2033f7405b328c3682c0.jpg?v=7531ab97bd050c4232192732f9327d09">
+                                                    <img src="./demo/545a2033f7405b328c3682c0_thumbnail.jpg" orig_width="800" bbox="">
                                                 </div>
-                                                <input id="Radio3" name="radio" value="option_545a2033f7405b328c3682c0" type="radio"><label id="Label3" class="T_edit_min" for="" name="option">图片1就会很会发个价格几乎U盾的Uuiyui快就hi就回家回家</label>
+                                                <input id="Radio3" name="radio" value="option_545a2033f7405b328c3682c0" type="radio" />
+                                                <label id="Label3" class="T_edit_min" for="" name="option">图片1就会很会发个价格几乎U盾的Uuiyui快就hi就回家回家</label>
                                             </div>
                                         </li>
                                         <li class="dragZone">
@@ -664,7 +305,7 @@
                                                             <input title="Click to add Files" name="files[]" type="file" multiple="multiple" /></label>
                                                     </div>
                                                 </div>
-                                                <div style="display: block;" class="AddQImgCon_ie">
+                                                <div style="display: block;" class="AddQImgCon">
                                                     <div class="file-box">
                                                         <form id="logo_uploader_form" enctype="multipart/form-data" method="POST" action="">
                                                             <iframe style="left: 0px; top: 0px; width: 100%; height: 100%; filter: alpha(opacity = 0); position: absolute; opacity: 0; -moz-opacity: 0; -khtml-opacity: 0;" id="imgUpload" class="uploadfile" src="./demo/saved_resource.htm"></iframe>
@@ -748,7 +389,7 @@
                                         <li style="overflow: inherit;">
                                             <div id="545a205cf7405b328c3682c9" class="option_Fill">
                                                 <div style="display: none;" class="min_an"><i></i></div>
-                                                <input style="width: 300px;" value="" type="text">
+                                                <input style="width: 300px; height: 30px;" value="" type="text">
                                             </div>
                                         </li>
                                     </ul>
@@ -773,7 +414,7 @@
                                         <li style="overflow: inherit;">
                                             <div id="545a206cf7405b328c3682cc" class="option_Fill">
                                                 <div style="display: none;" class="min_an"><i></i></div>
-                                                <textarea cols="40" rows="5" type="text"></textarea>
+                                                <textarea cols="40" rows="5" style="border: solid 1px rgb(219,219,219);" type="text"></textarea>
                                             </div>
                                         </li>
                                     </ul>
@@ -964,7 +605,7 @@
                                 </div>
                                 <div class="topic_type_con">
                                     <div class="Drag_area">
-                                        <div class="th4 T_edit q_title" name="question">中国共产党的性质</div>
+                                        <div class="th4 T_edit q_title" name="question">关于节假日安排你的意见</div>
                                     </div>
                                     <ul class="unstyled">
                                         <li>

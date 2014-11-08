@@ -71,6 +71,7 @@
   <ItemGroup>
     <Content Include="BaseGrid.aspx" />
     <Content Include="css\button.css" />
+    <Content Include="css\mycss.css" />
     <Content Include="css\popuplayer.css" />
     <Content Include="css\public.css" />
     <Content Include="css\public_1.css" />
@@ -7126,6 +7127,7 @@
     <Content Include="SurveyUI\zebra_datepicker_metallic.css" />
     <Content Include="SurveyUI\问卷设计-你的上班有什么看法.htm" />
     <Content Include="SurveyUI\问卷设计防晒霜看法.htm" />
+    <Content Include="Test.aspx" />
     <Content Include="UITest.aspx" />
     <Content Include="ValidCode.aspx" />
     <Content Include="Web.config">
@@ -7172,6 +7174,13 @@
     </Compile>
     <Compile Include="ModelOR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UITest.aspx.cs">
       <DependentUpon>UITest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
