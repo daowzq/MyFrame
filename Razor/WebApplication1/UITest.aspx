@@ -7,9 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/mycss.css" rel="stylesheet" />
     <title></title>
+    <script src="SurveyUI/jquery_1.10.2.min.js"></script>
+    <script src="SurveyUI/jquery-migrate-1.2.1.js"></script>
+    <script src="SurveyUI/jquery.cookie.js"></script>
+    <script src="SurveyUI/jquery-ui-1.10.min.js"></script>
     <style type="text/css">
       
     </style>
+    <script type="text/javascript">
+        $(function () {
+
+            //菜单切换
+            $(".accordion-group h4").click(function () {
+                $(this).find('i').toggleClass("icon_on");
+                $(this).siblings("h4").find('i').removeClass("icon_on");
+                $(this).next("ul").slideToggle("slow").siblings("ul:visible").slideUp("slow");
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="wjContent">
