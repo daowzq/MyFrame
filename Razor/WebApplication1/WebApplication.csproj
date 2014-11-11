@@ -7083,7 +7083,9 @@
     <Content Include="Ext_4.2\src\ZIndexManager.js" />
     <Content Include="Global.asax" />
     <Content Include="Grid.aspx" />
+    <Content Include="JqueryTest.aspx" />
     <Content Include="json.js" />
+    <Content Include="js文档介绍.txt" />
     <Content Include="juicer.aspx" />
     <Content Include="plants.xml" />
     <Content Include="SurveyUI\21.gif" />
@@ -7164,6 +7166,13 @@
     </Compile>
     <Compile Include="Grid.aspx.designer.cs">
       <DependentUpon>Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryTest.aspx.cs">
+      <DependentUpon>JqueryTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryTest.aspx.designer.cs">
+      <DependentUpon>JqueryTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="juicer.aspx.cs">
       <DependentUpon>juicer.aspx</DependentUpon>

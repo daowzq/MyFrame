@@ -31,7 +31,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
                 <!--/.wentop-->
-                <div class="rows1" style="">
+                <div class="rows1" style="position:fixed; top:2px;">
                     <div class="well sidebar-nav affix-top" id="accordion1">
                         <div class="accordion-group">
                             <h4 class="tc">

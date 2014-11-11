@@ -31,6 +31,11 @@ a {
     outline-color: invert;
 }
 
+/*菜单切换样式*/
+.icon_on {
+    background: url(/images/xjwn_index_button.png) no-repeat -364px -4px!important;
+}
+
 /*具体内容*/
 .wjContent {
     width: 990px;
