@@ -12,11 +12,34 @@
     <script src="SurveyUI/jquery.cookie.js"></script>
     <script src="SurveyUI/jquery-ui-1.10.min.js"></script>
     <style type="text/css">
-      
+        /*返回顶部*/
+        .gotoTop {
+            width: 44px;
+            height: 120px;
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            margin-left: 506px;
+            cursor: pointer;
+        }
+            .gotoTop a {
+                width: 40px;
+                height: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 8px;
+                display: block;
+                cursor: pointer;
+            }
+
+                .gotoTop a:hover {
+                    background: #5CB542;
+                    color: #fff;
+                    text-decoration: none;
+                }
     </style>
     <script type="text/javascript">
         $(function () {
-
             //菜单切换
             $(".accordion-group h4").click(function () {
                 $(this).find('i').toggleClass("icon_on");
@@ -31,7 +54,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
                 <!--/.wentop-->
-                <div class="rows1" style="position:fixed; top:2px;">
+                <div class="rows1" style="position: fixed; top: 2px;">
                     <div class="well sidebar-nav affix-top" id="accordion1">
                         <div class="accordion-group">
                             <h4 class="tc">
@@ -222,6 +245,10 @@
                 </div>
                 <!--/.rows1-->
                 <div class="rows2 well2 Tj">
+                    <div class="gotoTop" style="">
+                        <a href="javascript:;" title="回到顶部" style="background: url(images/top_hj.png) no-repeat scroll 0px 0px transparent;"></a>
+                        <a href="javascript:;" title="微信关注" style="background: url(images/wxpic.jpg) no-repeat scroll 0px 0px transparent;"></a>
+                    </div>
                     <h4 name="project" class="h4-bg T_edit p_title">你的上班有什么看法</h4>
                     <table class="table1 bg-m">
                         <tbody>
