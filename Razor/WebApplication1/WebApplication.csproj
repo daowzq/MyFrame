@@ -7083,6 +7083,8 @@
     <Content Include="Ext_4.2\src\ZIndexManager.js" />
     <Content Include="Global.asax" />
     <Content Include="Grid.aspx" />
+    <Content Include="images\top_hj.png" />
+    <Content Include="images\wxpic.jpg" />
     <Content Include="JqueryTest.aspx" />
     <Content Include="json.js" />
     <Content Include="js文档介绍.txt" />
