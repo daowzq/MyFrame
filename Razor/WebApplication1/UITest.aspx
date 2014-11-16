@@ -11,6 +11,8 @@
     <script src="SurveyUI/jquery-migrate-1.2.1.js"></script>
     <script src="SurveyUI/jquery.cookie.js"></script>
     <script src="SurveyUI/jquery-ui-1.10.min.js"></script>
+    <link href="js/layer/skin/layer.css" rel="stylesheet" />
+    <script src="js/layer/layer.min.js"></script>
     <style type="text/css">
         /*返回顶部*/
         .gotoTop {
@@ -22,6 +24,7 @@
             margin-left: 506px;
             cursor: pointer;
         }
+
             .gotoTop a {
                 width: 40px;
                 height: 40px;
@@ -46,7 +49,32 @@
                 $(this).siblings("h4").find('i').removeClass("icon_on");
                 $(this).next("ul").slideToggle("slow").siblings("ul:visible").slideUp("slow");
             });
+            //回到顶部
+            $(".gotoTop a").first().css({ "visibility": "hidden" });
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 100) {
+                    $(".gotoTop a").first().css({ "visibility": "visible" });
+                } else {
+                    $(".gotoTop a").first().css({ "visibility": "hidden" });
+                }
+            });
+            $('.gotoTop a:first').live('click', function () {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 'slow')
+            });
+
+            //弹出框
+            $(".ui-draggable").first().click(function () {
+               // layer.msg('test');
+            });
+
+            //拖拽
+            $(".ui-draggable").draggable({
+
+            })
         });
+
     </script>
 </head>
 <body>
