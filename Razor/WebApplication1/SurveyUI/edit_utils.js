@@ -31,7 +31,6 @@ ProblemDesign.prototype = {
 
                 //删除文字编辑框
                 $('.zon_edit').remove();
-
                 var id = ui.helper.attr('disp_type') || ui.helper.attr('name');
                 ui.helper.html('').css({
                     'height': 'auto'

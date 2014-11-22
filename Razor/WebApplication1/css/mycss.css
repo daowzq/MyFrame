@@ -96,6 +96,10 @@ ul li {
             margin-right: 5px;
         }
 
+.ui-draggable {
+    list-style: none;
+}
+
 [class^='-icon'], [class*='-icon'] {
     margin-right: 0px;
     vertical-align: middle;
@@ -446,6 +450,7 @@ input {
 
 .module {
     margin-bottom: 20px;
+    background-color: #fff;
 }
 
 .AddQImgCon {

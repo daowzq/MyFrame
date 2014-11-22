@@ -6,6 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/mycss.css" rel="stylesheet" />
+    <link href="css/gototop.css" rel="stylesheet" />
     <title></title>
     <script src="SurveyUI/jquery_1.10.2.min.js"></script>
     <script src="SurveyUI/jquery-migrate-1.2.1.js"></script>
@@ -13,33 +14,10 @@
     <script src="SurveyUI/jquery-ui-1.10.min.js"></script>
     <link href="js/layer/skin/layer.css" rel="stylesheet" />
     <script src="js/layer/layer.min.js"></script>
+    <script src="js/surveyTemplate.js"></script>
+    <script src="js/common.js"></script>
     <style type="text/css">
-        /*返回顶部*/
-        .gotoTop {
-            width: 44px;
-            height: 120px;
-            position: fixed;
-            top: 80%;
-            left: 50%;
-            margin-left: 506px;
-            cursor: pointer;
-        }
-
-            .gotoTop a {
-                width: 40px;
-                height: 40px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 8px;
-                display: block;
-                cursor: pointer;
-            }
-
-                .gotoTop a:hover {
-                    background: #5CB542;
-                    color: #fff;
-                    text-decoration: none;
-                }
+       
     </style>
     <script type="text/javascript">
         $(function () {
@@ -64,9 +42,34 @@
                 }, 'slow')
             });
 
-            //弹出框
-            $(".ui-draggable").first().click(function () {
-               // layer.msg('test');
+            //题型设置
+            $(".ui-draggable").draggable({
+                helper: "clone",
+                appendTo: 'body',
+                start: function (event, ui) {
+                    var questionType = ui.helper.find("a").text().trim();
+                    var QUESTIONMAP = {
+                        "单选题": TPL_MAP.SINGLE,
+                        "多选题": TPL_MAP.MUTIPLE,
+                        "图片单选题": TPL_MAP.IMGSINGLE,
+                        "图片多选题": TPL_MAP.IMGMULTIPLE,
+                        "排序题": TPL_MAP.ORDER,
+                        "打分题": TPL_MAP.SCORE,
+
+                        "单行填空题": TPL_MAP.BLANK,
+                        "多行填空题": TPL_MAP.MULTIPLE_BLANK,
+                        "多项填空题": TPL_MAP.Multi_Line_blank,
+
+                        "矩阵单选题": TPL_MAP.MATRIX_SINGLE,
+                        "矩阵多选题": TPL_MAP.MATRIX_MULTIPLE,
+                        "矩阵填空题": TPL_MAP.MATRIX_BLANK,
+                        "矩阵打分题": TPL_MAP.MATRIX_SCORE,
+                        "段落说明": TPL_MAP.DESC,
+                        "分页": TPL_MAP.PAGE
+                    }
+                    ui.helper.html(QUESTIONMAP[questionType]);
+                },
+                revert: "invalid"
             });
 
             //拖拽
