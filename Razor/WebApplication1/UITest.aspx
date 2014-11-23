@@ -17,7 +17,9 @@
     <script src="js/surveyTemplate.js"></script>
     <script src="js/common.js"></script>
     <style type="text/css">
-       
+        .uploader input[type='file'] {
+            display: none;
+        }
     </style>
     <script type="text/javascript">
         $(function () {
@@ -46,6 +48,7 @@
             $(".ui-draggable").draggable({
                 helper: "clone",
                 appendTo: 'body',
+                connectToSortable: ".dragwen",
                 start: function (event, ui) {
                     var questionType = ui.helper.find("a").text().trim();
                     var QUESTIONMAP = {
@@ -66,10 +69,14 @@
                         "矩阵打分题": TPL_MAP.MATRIX_SCORE,
                         "段落说明": TPL_MAP.DESC,
                         "分页": TPL_MAP.PAGE
-                    }
+                    };
                     ui.helper.html(QUESTIONMAP[questionType]);
+                    //  ui.help.cursorAt = { top: $("html,body").scrollTop(), left: $("html,body").scrollLeft() }
+                    // alert($("html,body").scrollTop());
                 },
-                revert: "invalid"
+                revert: "invalid",
+                scroll: true,
+                cursor: "move"
             });
 
             //拖拽
