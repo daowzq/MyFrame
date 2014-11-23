@@ -1,0 +1,11 @@
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\bin\Debug\flexB2C.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\bin\Debug\flexB2C.DBUtility.pdb
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\bin\Debug\MySql.Data.dll
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\obj\Debug\flexB2C.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\obj\Debug\flexB2C.DBUtility.pdb
+D:\Frame\MyFrame\Razor\DBUtility\bin\Debug\flexB2C.DBUtility.dll
+D:\Frame\MyFrame\Razor\DBUtility\bin\Debug\flexB2C.DBUtility.pdb
+D:\Frame\MyFrame\Razor\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\Frame\MyFrame\Razor\DBUtility\obj\Debug\flexB2C.DBUtility.dll
+D:\Frame\MyFrame\Razor\DBUtility\obj\Debug\flexB2C.DBUtility.pdb

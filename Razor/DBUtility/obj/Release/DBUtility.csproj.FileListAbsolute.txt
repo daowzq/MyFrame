@@ -1,0 +1,4 @@
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\bin\Release\flexB2C.DBUtility.dll
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\bin\Release\MySql.Data.dll
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\FlexB2CBookShop\DBUtility\obj\Release\flexB2C.DBUtility.dll

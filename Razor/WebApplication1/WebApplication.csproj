@@ -71,6 +71,7 @@
   <ItemGroup>
     <Content Include="BaseGrid.aspx" />
     <Content Include="css\button.css" />
+    <Content Include="css\gototop.css" />
     <Content Include="css\mycss.css" />
     <Content Include="css\popuplayer.css" />
     <Content Include="css\public.css" />
@@ -7087,6 +7088,7 @@
     <Content Include="images\wxpic.jpg" />
     <Content Include="JqueryTest.aspx" />
     <Content Include="json.js" />
+    <Content Include="js\common.js" />
     <Content Include="js\layer\extend\layer.ext.js" />
     <Content Include="js\layer\layer.min.js" />
     <Content Include="js\layer\skin\default\icon_ext.png" />
@@ -7099,6 +7101,7 @@
     <Content Include="js\layer\skin\default\xubox_title0.png" />
     <Content Include="js\layer\skin\layer.css" />
     <Content Include="js\layer\skin\layer.ext.css" />
+    <Content Include="js\surveyTemplate.js" />
     <Content Include="js文档介绍.txt" />
     <Content Include="juicer.aspx" />
     <Content Include="plants.xml" />
