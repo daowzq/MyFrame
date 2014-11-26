@@ -162,6 +162,7 @@ function init_question(){
 
 
 function get_init_template(question_type) {
+   
     var init_template = INIT_TEMPLATE_MAP[question_type];
     return init_template;
 }

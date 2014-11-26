@@ -45,6 +45,12 @@ a {
     background-color: white;
 }
 
+.container-fluid {
+    margin: 0 auto;
+    width: 990px;
+    position: relative;
+}
+
 ul li {
     list-style: none;
     padding-left: 0px;
@@ -59,6 +65,7 @@ ul li {
     border-color: #e3e3e3;
     background-color: rgb(245,245,245);
     border-radius: 4px;
+    position: fixed;
 }
 
 .well {
@@ -110,6 +117,15 @@ ul li {
 
 .fr li a:hover [class*='-icon'], .fr li a:focus [class*='-icon'], [class^='-icon-active'], [class*='-icon-active'] {
     background-image: url("/images/wjsj_toolico.png");
+}
+
+.accordion-group h4 i {
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    margin: 1px 0 0 5px;
+    vertical-align: middle;
+    background: url(/images/xjwn_index_button.png) no-repeat -364px -24px;
 }
 
 .basic-too11-icon-active {
@@ -594,4 +610,11 @@ table .topic_ul {
     line-height: 28px!important;
     vertical-align: middle;
     overflow: hidden;
+}
+
+.anbx {
+    background: #ffffff!important;
+    width: 800px!important;
+    z-index: 9999!important;
+    border-width: 0px!important;
 }

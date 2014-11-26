@@ -11,7 +11,7 @@
     <script src="SurveyUI/jquery_1.10.2.min.js"></script>
     <script src="SurveyUI/jquery-migrate-1.2.1.js"></script>
     <script src="SurveyUI/jquery.cookie.js"></script>
-    <script src="SurveyUI/jquery-ui-1.10.min.js"></script>
+    <script src="js/JqueryUI/js/jquery-ui-1.10.4.custom.js"></script>
     <link href="js/layer/skin/layer.css" rel="stylesheet" />
     <script src="js/layer/layer.min.js"></script>
     <script src="js/surveyTemplate.js"></script>
@@ -45,7 +45,7 @@
             });
 
             //题型设置
-            $(".ui-draggable").draggable({
+            $(".moduleL").draggable({
                 helper: "clone",
                 appendTo: 'body',
                 connectToSortable: ".dragwen",
@@ -70,7 +70,12 @@
                         "段落说明": TPL_MAP.DESC,
                         "分页": TPL_MAP.PAGE
                     };
-                    ui.helper.html(QUESTIONMAP[questionType]);
+                    var html = "<p>fasdfasd</p>";
+                    //alert($(document).scrollTop());
+                    ui.offset.top = 10;
+                    ui.helper.html('').css({
+                        'height': 'auto'
+                    }).addClass('anbx').append(QUESTIONMAP[questionType]);
                     //  ui.help.cursorAt = { top: $("html,body").scrollTop(), left: $("html,body").scrollLeft() }
                     // alert($("html,body").scrollTop());
                 },
@@ -92,7 +97,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
                 <!--/.wentop-->
-                <div class="rows1" style="position: fixed; top: 2px;">
+                <div class="rows1">
                     <div class="well sidebar-nav affix-top" id="accordion1">
                         <div class="accordion-group">
                             <h4 class="tc">

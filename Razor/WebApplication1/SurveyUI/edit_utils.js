@@ -16,25 +16,24 @@ ProblemDesign.prototype = {
     Drag: function(add_topic1, add_topic2, after_dropped) { //初始化拖动排序
         var this_ = this;
 
-        $('.matrix').scroll(function() {
-            return false;
-        });
+        //$('.matrix').scroll(function() {
+        //    return false;
+        //});
 
         //题型拖动选择
-        var x2 = $(window).width();
-        var y2 = $(window).height();
+        //var x2 = $(window).width();
+        //var y2 = $(window).height();
         $(this_.obj.dragObj).draggable({
             connectToSortable: ".dragwen",
             helper: "clone",
             appendTo: 'body',
             start: function(event, ui) {
-
                 //删除文字编辑框
                 $('.zon_edit').remove();
                 var id = ui.helper.attr('disp_type') || ui.helper.attr('name');
                 ui.helper.html('').css({
                     'height': 'auto'
-                }).addClass('anbx').append(add_topic1(id));
+                }).addClass('anbx').append("<p>fasdfasd</p>");
             },
             revert: "invalid"
         });
