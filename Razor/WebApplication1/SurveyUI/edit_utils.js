@@ -30,10 +30,11 @@ ProblemDesign.prototype = {
             start: function(event, ui) {
                 //删除文字编辑框
                 $('.zon_edit').remove();
+
                 var id = ui.helper.attr('disp_type') || ui.helper.attr('name');
                 ui.helper.html('').css({
                     'height': 'auto'
-                }).addClass('anbx').append("<p>fasdfasd</p>");
+                }).addClass('anbx').append(add_topic1(id));
             },
             revert: "invalid"
         });

@@ -121,6 +121,7 @@
     <Content Include="demo\Tjj.css" />
     <Content Include="demo\zebra_datepicker.js" />
     <Content Include="demo\zebra_datepicker_metallic.css" />
+    <Content Include="DraggableTest.aspx" />
     <Content Include="Ext_4.2\bootstrap.js" />
     <Content Include="Ext_4.2\build.xml" />
     <Content Include="Ext_4.2\ext-all-debug-w-comments.js" />
@@ -7782,6 +7783,13 @@
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DraggableTest.aspx.cs">
+      <DependentUpon>DraggableTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DraggableTest.aspx.designer.cs">
+      <DependentUpon>DraggableTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

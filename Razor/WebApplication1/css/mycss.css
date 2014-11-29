@@ -67,11 +67,16 @@ ul li {
     border-radius: 4px;
     position: fixed;
 }
-
+.Drag_area {
+    width: 768px;
+    cursor: move;
+    z-index: 9;
+    padding: 5px 0 0 10px;
+    margin: -10px 0 0 -10px;
+}
 .well {
     padding: 8px 8px;
 }
-
 
 .ul-tool {
     margin-top: 5px;
@@ -613,8 +618,9 @@ table .topic_ul {
 }
 
 .anbx {
-    background: #ffffff!important;
+    background-color: #fff;
     width: 800px!important;
     z-index: 9999!important;
     border-width: 0px!important;
+    opacity: 1;
 }

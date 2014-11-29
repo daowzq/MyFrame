@@ -1,6 +1,7 @@
 ﻿//问卷模板
 var TPL_MAP = {};
 TPL_MAP.PAGE = '<li class="module paging" name="page"><div class="topic_type"><div class="topic_type_menu"><div class="setup-group"><a class="DelPaging" title="删除分页" href="javascript:;" style="display: none;"> <i class="del2-icon-active"></i></a></div></div><div class="topic_type_con"><div class="Drag_area" style="margin:0px;"><div class="icon_paging"></div><div class="fr con_paging">页码：<span></span></div></div></div></div><div class="updown" style="display: none;"><a href="javascript:;"> <i class="up-icon-active"></i></a><a href="javascript:;"><i class="down-icon-active"></i></a></div></li>';
+//单项选择
 TPL_MAP.SINGLE = '<li class="module"><div class="topic_type"><div class="topic_type_menu"><div class="setup-group"><h4></h4></div></div><div class="topic_type_con"><div class="th4">单选题</div><ul class="unstyled"><li><input type="radio" name="radio" id="1" value="1"><label class="" for="">选项1</label></li><li><input type="radio" name="radio" id="2" value="1"><label class="" for="">选项2</label></li></ul></div></div></li>';
 TPL_MAP.MUTIPLE = '<li class="module"><div class="topic_type"><div class="topic_type_menu"><div class="setup-group"><h4></h4></div></div><div class="topic_type_con"><h4 class="th4 T_edit">多选题</h4><ul class="unstyled"><li><input type="checkbox" name="radio" id="" value="1" /><label class="">选项1</label></li><li><input type="checkbox" name="radio" id="" value="2" /><label class="">选项2</label></li></ul></div></div></li>';
 TPL_MAP.IMGSINGLE = '<li class="module"><div class="topic_type"></div><div class="topic_type_con"><div class="Drag_area"><div name="question" class="th4 T_edit q_title">图片单选题</div></div><ul class="unstyled Imgli"><li class="dragZone"><div class="questionImgBox abor"> <div class="AddQImgCon"><div class="uploader"><label><input type="file" name="files[]" multiple="multiple" title="Click to add Files"/></label></div></div></div></li></ul></div></li>';
@@ -35,3 +36,24 @@ TPL_MAP.MATRIX_SCORE = '<li class="module"><div class="topic_type"><div class="t
 TPL_MAP.Multi_Line_blank = '<li class="module"><div class="topic_type"><div class="topic_type_menu"><div class="setup-group"><h4></h4></div></div><div class="topic_type_con"><h4 class="th4 T_edit">多行填空</h4><ul class="unstyled"><li><textarea name="" id="" cols="40" rows="5"></textarea></li></ul></div></div></li>';
 //段落说明
 TPL_MAP.DESC = '<li class="module"><div class="topic_type"><div class="topic_type_menu"><div class="setup-group"><h4></h4></div></div><div class="topic_type_con"><div class="Drag_area"><div class="th4 T_edit">段落说明</div></div></div></div></li>'
+
+
+var QUESTIONMAP = {
+    "单选题": TPL_MAP.SINGLE,
+    "多选题": TPL_MAP.MUTIPLE,
+    "图片单选题": TPL_MAP.IMGSINGLE,
+    "图片多选题": TPL_MAP.IMGMULTIPLE,
+    "排序题": TPL_MAP.ORDER,
+    "打分题": TPL_MAP.SCORE,
+
+    "单行填空题": TPL_MAP.BLANK,
+    "多行填空题": TPL_MAP.MULTIPLE_BLANK,
+    "多项填空题": TPL_MAP.Multi_Line_blank,
+
+    "矩阵单选题": TPL_MAP.MATRIX_SINGLE,
+    "矩阵多选题": TPL_MAP.MATRIX_MULTIPLE,
+    "矩阵填空题": TPL_MAP.MATRIX_BLANK,
+    "矩阵打分题": TPL_MAP.MATRIX_SCORE,
+    "段落说明": TPL_MAP.DESC,
+    "分页": TPL_MAP.PAGE
+};

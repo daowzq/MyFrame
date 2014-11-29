@@ -47,47 +47,41 @@
             //题型设置
             $(".moduleL").draggable({
                 helper: "clone",
-                appendTo: 'body',
+                appendTo: '.rows2',
                 connectToSortable: ".dragwen",
                 start: function (event, ui) {
                     var questionType = ui.helper.find("a").text().trim();
-                    var QUESTIONMAP = {
-                        "单选题": TPL_MAP.SINGLE,
-                        "多选题": TPL_MAP.MUTIPLE,
-                        "图片单选题": TPL_MAP.IMGSINGLE,
-                        "图片多选题": TPL_MAP.IMGMULTIPLE,
-                        "排序题": TPL_MAP.ORDER,
-                        "打分题": TPL_MAP.SCORE,
-
-                        "单行填空题": TPL_MAP.BLANK,
-                        "多行填空题": TPL_MAP.MULTIPLE_BLANK,
-                        "多项填空题": TPL_MAP.Multi_Line_blank,
-
-                        "矩阵单选题": TPL_MAP.MATRIX_SINGLE,
-                        "矩阵多选题": TPL_MAP.MATRIX_MULTIPLE,
-                        "矩阵填空题": TPL_MAP.MATRIX_BLANK,
-                        "矩阵打分题": TPL_MAP.MATRIX_SCORE,
-                        "段落说明": TPL_MAP.DESC,
-                        "分页": TPL_MAP.PAGE
-                    };
-                    var html = "<p>fasdfasd</p>";
-                    //alert($(document).scrollTop());
-                    ui.offset.top = 10;
                     ui.helper.html('').css({
                         'height': 'auto'
                     }).addClass('anbx').append(QUESTIONMAP[questionType]);
-                    //  ui.help.cursorAt = { top: $("html,body").scrollTop(), left: $("html,body").scrollLeft() }
-                    // alert($("html,body").scrollTop());
                 },
+                opacity: 0,
                 revert: "invalid",
-                scroll: true,
-                cursor: "move"
+                scroll: true
             });
 
-            //拖拽
-            $(".ui-draggable").draggable({
+            //题型排序
 
-            })
+            $(".dragwen").sortable({
+                //containment:".dragwen",
+                //axis:'y',
+                snap: true,
+                delay: 100,
+                opacity: 0.9,
+                scrollSensitivity: 160,
+                tolerance: 'pointer',
+                handle: '.Drag_area',
+                start: function () {
+                },
+                sort: function (event, ui) {
+
+                },
+                receive: function (event, ui) {
+                },
+                stop: function () {
+                },
+                revert: true
+            });
         });
 
     </script>
@@ -305,6 +299,7 @@
                     </table>
 
                     <ul class="dragwen ui-sortable" id="question_box">
+
                         <li class="module">
                             <div class="topic_type">
                                 <div class="topic_type_menu">
