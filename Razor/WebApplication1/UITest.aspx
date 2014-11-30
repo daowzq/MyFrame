@@ -55,6 +55,9 @@
                         'height': 'auto'
                     }).addClass('anbx').append(QUESTIONMAP[questionType]);
                 },
+                stop: function (event, ui) {
+                  
+                },
                 opacity: 0,
                 revert: "invalid",
                 scroll: true
