@@ -56,7 +56,8 @@
                     }).addClass('anbx').append(QUESTIONMAP[questionType]);
                 },
                 stop: function (event, ui) {
-                  
+                    //这里先执行
+                    
                 },
                 opacity: 0,
                 revert: "invalid",
@@ -80,8 +81,13 @@
 
                 },
                 receive: function (event, ui) {
+
                 },
-                stop: function () {
+                stop: function (event, ui) {
+                    //这里后执行
+                    debugger
+                    // ui.placeholder[0].outerHTML = "<a>AAAAAAA</a>";
+                    // $("<a>HiHIAAA</a>").appendTo("");
                 },
                 revert: true
             });

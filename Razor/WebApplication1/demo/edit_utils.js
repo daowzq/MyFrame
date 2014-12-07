@@ -112,12 +112,14 @@ ProblemDesign.prototype = {
 
                 _this.find('.moduleL').remove();
                 var l = _this.find('.module').length;
-
+                
+              
                 if (this_.index == 0) {
+                    //关键代码(WMG:2014127)
                     this_.AddQuestion = $(add_topic2(id, this_.t_wz, this_.paging_m)).prependTo(_this);
                 } else if (this_.index == l) {
 
-                    this_.AddQuestion = $(add_topic2(id, this_.t_wz, this_.paging_m)).appendTo(_this);
+                    this_.AddQuestion = $(add_topic2(id, this_.t_wz, this_.paging_m)).appendTo(_this);  //关键代码(WMG:2014127)
                     // this_.Site_total();
                     // if(id=="page"){
                     //                         loadMack({off:'on',Limg:0,text:'不能在最后一题放置分页符',set:2500});     
@@ -125,6 +127,7 @@ ProblemDesign.prototype = {
                 } else {
                     //_this.find('.module:eq('+this_.index+')').before(add_topic2(id,this_.t_wz,this_.paging_m));
                     this_.AddQuestion = $(add_topic2(id, this_.t_wz, this_.paging_m)).insertBefore(_this.find('.module:eq(' + this_.index + ')'));
+                    //关键代码(WMG:2014127)
                     //this_.Site_last();//判断最后一题有无分页 
                 }
                 //this_.Site_adjacent();//判断两个分页符是否相邻
