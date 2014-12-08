@@ -104,21 +104,22 @@ ProblemDesign.prototype = {
             stop: function() {
                 //开启判断题目选项是否显示
                 ptvt_Switch=true;
-
+                
                 //输出内容
                 var _this = $(this_.obj.sorObj);
                 var mbobj = _this.find('.moduleL');
                 var id = mbobj.attr('disp_type') || mbobj.attr('name');
 
-                _this.find('.moduleL').remove();
-                var l = _this.find('.module').length;
+                _this.find('.moduleL').remove();// 移除
+                var l = _this.find('.module').length;//32
                 
               
                 if (this_.index == 0) {
                     //关键代码(WMG:2014127)
+                    
                     this_.AddQuestion = $(add_topic2(id, this_.t_wz, this_.paging_m)).prependTo(_this);
                 } else if (this_.index == l) {
-
+                    
                     this_.AddQuestion = $(add_topic2(id, this_.t_wz, this_.paging_m)).appendTo(_this);  //关键代码(WMG:2014127)
                     // this_.Site_total();
                     // if(id=="page"){

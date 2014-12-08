@@ -8,9 +8,8 @@
     <link href="css/mycss.css" rel="stylesheet" />
     <link href="css/gototop.css" rel="stylesheet" />
     <title></title>
-    <script src="SurveyUI/jquery_1.10.2.min.js"></script>
+    <script src="js/jquery-1.6.1.js"></script>
     <script src="SurveyUI/jquery-migrate-1.2.1.js"></script>
-    <script src="SurveyUI/jquery.cookie.js"></script>
     <script src="js/JqueryUI/js/jquery-ui-1.10.4.custom.js"></script>
     <link href="js/layer/skin/layer.css" rel="stylesheet" />
     <script src="js/layer/layer.min.js"></script>
@@ -57,7 +56,6 @@
                 },
                 stop: function (event, ui) {
                     //这里先执行
-                    
                 },
                 opacity: 0,
                 revert: "invalid",
@@ -84,10 +82,10 @@
 
                 },
                 stop: function (event, ui) {
-                    //这里后执行
-                    debugger
-                    // ui.placeholder[0].outerHTML = "<a>AAAAAAA</a>";
-                    // $("<a>HiHIAAA</a>").appendTo("");
+                    var _this = $(".dragwen");
+                    _this.find('.moduleL').remove();// 移除
+
+                    // $(add_topic2(id, this_.t_wz, this_.paging_m)).prependto(_this);
                 },
                 revert: true
             });
