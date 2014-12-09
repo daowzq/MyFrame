@@ -84,8 +84,7 @@
                 stop: function (event, ui) {
                     var _this = $(".dragwen");
                     _this.find('.moduleL').remove();// 移除
-
-                    // $(add_topic2(id, this_.t_wz, this_.paging_m)).prependto(_this);
+                    $(QUESTIONMAP["单选题"]).prependTo(_this);
                 },
                 revert: true
             });
