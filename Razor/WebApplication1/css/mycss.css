@@ -67,6 +67,7 @@ ul li {
     border-radius: 4px;
     position: fixed;
 }
+
 .Drag_area {
     width: 768px;
     cursor: move;
@@ -74,6 +75,7 @@ ul li {
     padding: 5px 0 0 10px;
     margin: -10px 0 0 -10px;
 }
+
 .well {
     padding: 8px 8px;
 }
@@ -623,4 +625,12 @@ table .topic_ul {
     z-index: 9999!important;
     border-width: 0px!important;
     opacity: 1;
+}
+
+/*拖拽时holder样式*/
+.ui-sortable-placeholder {
+    background: #F90!important;
+    visibility: visible !important;
+    height: 8px !important;
+    width: 500px;
 }

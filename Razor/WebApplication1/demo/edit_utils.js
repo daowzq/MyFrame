@@ -83,16 +83,13 @@ ProblemDesign.prototype = {
             tolerance: 'pointer',
             handle: '.Drag_area',
             start: function() {
-
                 //删除文字编辑框
                 $('.zon_edit').remove();
                 //关闭判断题目选项是否显示
                 ptvt_Switch=false;
-
             },
             sort: function(event, ui) {
                 //var m = $(''+this_.obj.sorObj+' > li').index(ui.placeholder);
-                //alert(m);
                 //$('.h4st1').text(m);
             },
             receive: function(event, ui) {
