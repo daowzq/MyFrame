@@ -395,6 +395,15 @@ TPL_MAP.DESC = "<li class='module paging' name='page'>\
 	<div style='display: none;' class='updown'><a href='javascript:;'><i class='up-icon-active'></i></a><a href='javascript:;'><i class='down-icon-active'></i></a></div>\
 </li>";
 
+//选项补充说明
+TPL_MAP.APPEND_TXT = " <input type='text' style='margin-left: 2px; border: 0; border-bottom: 1px solid black; background: #fff;' />";
+
+//补充说明项
+TPL_MAP.APPEND_TXTAREA = "<li style='margin-top: 5px;'>\
+	<span style='display: block; margin-top: 2px'>其他建议：</span>\
+	<textarea style='margin-top: 5px; width: 230px;' rows='3'></textarea>\
+</li>";
+
 //题型映射
 var QUESTIONMAP = {
     "SINGLE": TPL_MAP.SINGLE,
@@ -411,5 +420,7 @@ var QUESTIONMAP = {
     "MATRIX_BLANK": TPL_MAP.MATRIX_BLANK,
     "MATRIX_SCORE": TPL_MAP.MATRIX_SCORE,
     "DESC": TPL_MAP.DESC,
-    "PAGE": TPL_MAP.PAGE
+    "PAGE": TPL_MAP.PAGE,
+    "APPEND_TXT": TPL_MAP.APPEND_TXT,
+    "APPEND_TXTAREA": TPL_MAP.APPEND_TXTAREA
 };

@@ -92,7 +92,7 @@
                         var questType = questMenue.attr("name");  //问题类型
                         questMenue.remove();                      // 移除自身
                         $(QUESTIONMAP[questType]).prependTo(_this); //添加题型
-                        alert(sotIndex)
+                        // alert(sotIndex)
                     }
                 },
                 revert: true
@@ -110,7 +110,7 @@
                     <div class="well sidebar-nav affix-top" id="accordion1">
                         <div class="accordion-group">
                             <h4 class="tc">
-                                <a href="javascript:;">常用题型
+                                <a href="javascript:;">题型设置
                                     <i class="icon_on"></i>
                                 </a>
                             </h4>
@@ -207,17 +207,16 @@
                                 </a>
                             </h4>
                             <ul id="common" class="ul-tool collapse" style="display: none;">
-                                <li class="moduleL ui-draggable" name="7">
+                                <li class="moduleL ui-draggable" name="APPEND_TXT">
                                     <a href="javascript:;">
-                                        <i class="basic-too110-icon-active"></i>
-                                        矩阵打分题
+                                        <i class=""></i>
+                                        补充说明1
                                     </a>
                                 </li>
-
-                                <li class="moduleL ui-draggable" name="70" disp_type="split_line">
+                                <li class="moduleL ui-draggable" name="APPEND_TXTAREA">
                                     <a href="javascript:;">
-                                        <i class="basic-too2017-icon-active"></i>
-                                        分割线
+                                        <i class=""></i>
+                                        补充说明2
                                     </a>
                                 </li>
                             </ul>
@@ -260,7 +259,13 @@
                                         <li style="">
                                             <input type="radio" /><label class="T_edit_min" for="">选项1</label></li>
                                         <li style="">
-                                            <input type="radio" /><label class="T_edit_min" for="">选项2</label></li>
+                                            <input type="radio" /><label class="T_edit_min" for="">选项2</label>
+                                            <input type="text" style="margin-left: 2px; border: 0; border-bottom: 1px solid black; background: #fff;" />
+                                        </li>
+                                        <li style="margin-top: 5px;">
+                                            <span style="display: block; margin-top: 2px">其他建议：</span>
+                                            <textarea style="margin-top: 5px; width: 230px;" rows="3"></textarea>
+                                        </li>
                                     </ul>
                                     <div class="operationH"><a href="javascript:;" style="display: block;"><i title="添加选项" class="add-icon-active"></i></a><a class="Bub" href="javascript:;" title="批量添加" style="display: block;"><i class="clone-icon-active"></i></a></div>
                                 </div>
@@ -362,7 +367,7 @@
                                         <li>
                                             <div class="questionImgBox">
                                                 <div class="QImgCon">
-                                                    <img src="./demo/545a2044f7405b31353e2056_thumbnail.jpg" />
+                                                  <img src="./demo/545a2056f7405b328c3682c7_thumbnail.jpg" />
                                                 </div>
                                                 <input type="checkbox" /><label id="Label4" class="T_edit_min" for="" name="option">图片1</label>
                                             </div>
@@ -642,12 +647,12 @@
                                                 <table style="width: 682px;" class="table table-bordered td-Tc" cellspacing="0" cellpadding="0">
                                                     <tbody>
                                                         <tr>
-                                                            <td style="width: 165px;" width="136">&nbsp;</td>
-                                                            <td style="width: 206px;" class="T_edit_td" width="109" name="option" menutype="col">一般般</td>
-                                                            <td style="width: 308px;" class="T_edit_td" width="109" name="option" menutype="col">贪污腐败</td>
+                                                            <td style="width: 165px;">&nbsp;</td>
+                                                            <td style="width: 206px;" class="T_edit_td">一般般</td>
+                                                            <td style="width: 308px;" class="T_edit_td">贪污腐败</td>
                                                         </tr>
                                                         <tr class="Ed_tr">
-                                                            <td style="width: 165px; text-align: left;" id="545a210ff7405b31ef32a1af" class="T_edit_td" name="row" menutype="row">矩阵行1</td>
+                                                            <td style="width: 165px; text-align: left;" class="T_edit_td" name="row" menutype="row">矩阵行1</td>
                                                             <td style="width: 206px;">
                                                                 <div style="width: 206px;" class="div">
                                                                     <div style="width: 206px;" class="div">
