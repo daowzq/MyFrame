@@ -19,6 +19,16 @@
         .uploader input[type='file'] {
             display: none;
         }
+        .topmenue {
+            width: 990px;
+            position: fixed;
+            display: block;
+            top: 0px;
+            z-index: 9999;
+            height: 65px;
+            border: solid 1px red;
+            background-color:#1c658b;
+        }
     </style>
     <script type="text/javascript">
         $(function () {
@@ -98,12 +108,14 @@
                 revert: true
             });
         });
-
     </script>
 </head>
 <body>
     <div class="wjContent">
+        <div id="topmenue" class="topmenue">
+        </div>
         <div class="container-fluid">
+
             <div class="row-fluid">
                 <!--/.wentop-->
                 <div class="rows1">
@@ -367,7 +379,7 @@
                                         <li>
                                             <div class="questionImgBox">
                                                 <div class="QImgCon">
-                                                  <img src="./demo/545a2056f7405b328c3682c7_thumbnail.jpg" />
+                                                    <img src="./demo/545a2056f7405b328c3682c7_thumbnail.jpg" />
                                                 </div>
                                                 <input type="checkbox" /><label id="Label4" class="T_edit_min" for="" name="option">图片1</label>
                                             </div>
