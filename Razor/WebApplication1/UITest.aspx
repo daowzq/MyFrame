@@ -19,6 +19,7 @@
         .uploader input[type='file'] {
             display: none;
         }
+
         .topmenue {
             width: 990px;
             position: fixed;
@@ -27,7 +28,7 @@
             z-index: 9999;
             height: 65px;
             border: solid 1px red;
-            background-color:#1c658b;
+            background-color: #1c658b;
         }
     </style>
     <script type="text/javascript">
@@ -106,6 +107,26 @@
                     }
                 },
                 revert: true
+            });
+
+
+            //问题选型排序
+            $(".unstyled").sortable({
+                tolerance: 'pointer',
+                placeholder: "ui-sortable-sub-placeholder",
+                items: "li:not(.ui-state-disabled)" //排除选项
+            });
+            $(".unstyled").disableSelection();
+
+            //补充说明项放置
+            $(".moduleD[name='APPEND_TXT']").draggable({
+                helper: "clone",
+                start: function (event, ui) {
+                    var questionType = ui.helper.attr("name");
+                    ui.helper.html('').css({
+                        'height': 'auto'
+                    }).addClass("anbx-sub").append(QUESTIONMAP[questionType]);
+                },
             });
         });
     </script>
@@ -219,13 +240,13 @@
                                 </a>
                             </h4>
                             <ul id="common" class="ul-tool collapse" style="display: none;">
-                                <li class="moduleL ui-draggable" name="APPEND_TXT">
+                                <li class="moduleD ui-draggable" name="APPEND_TXT">
                                     <a href="javascript:;">
                                         <i class=""></i>
                                         补充说明1
                                     </a>
                                 </li>
-                                <li class="moduleL ui-draggable" name="APPEND_TXTAREA">
+                                <li class="moduleD ui-draggable" name="APPEND_TXTAREA">
                                     <a href="javascript:;">
                                         <i class=""></i>
                                         补充说明2
@@ -267,14 +288,14 @@
                                     <div class="Drag_area">
                                         <div class="th4 T_edit q_title">单选题</div>
                                     </div>
-                                    <ul class="unstyled ">
+                                    <ul class="unstyled">
                                         <li style="">
                                             <input type="radio" /><label class="T_edit_min" for="">选项1</label></li>
                                         <li style="">
                                             <input type="radio" /><label class="T_edit_min" for="">选项2</label>
                                             <input type="text" style="margin-left: 2px; border: 0; border-bottom: 1px solid black; background: #fff;" />
                                         </li>
-                                        <li style="margin-top: 5px;">
+                                        <li style="margin-top: 5px;" class="ui-state-disabled">
                                             <span style="display: block; margin-top: 2px">其他建议：</span>
                                             <textarea style="margin-top: 5px; width: 230px;" rows="3"></textarea>
                                         </li>

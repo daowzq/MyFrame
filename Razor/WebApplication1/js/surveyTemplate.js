@@ -396,7 +396,7 @@ TPL_MAP.DESC = "<li class='module paging' name='page'>\
 </li>";
 
 //选项补充说明
-TPL_MAP.APPEND_TXT = " <input type='text' style='margin-left: 2px; border: 0; border-bottom: 1px solid black; background: #fff;' />";
+TPL_MAP.APPEND_TXT = "<input type='text' style='width:180px; height:28px; margin-left: 2px; border: 0; border-bottom: 1px solid black; background: #fff;' />";
 
 //补充说明项
 TPL_MAP.APPEND_TXTAREA = "<li style='margin-top: 5px;'>\

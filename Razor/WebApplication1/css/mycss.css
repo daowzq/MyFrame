@@ -627,10 +627,24 @@ table .topic_ul {
     opacity: 1;
 }
 
+.anbx-sub {
+    width: 180px!important;
+    z-index: 9999!important;
+    border-width: 0px!important;
+    opacity: 1;
+}
+
 /*拖拽时holder样式*/
 .ui-sortable-placeholder {
     background: #F90!important;
     visibility: visible !important;
     height: 8px !important;
+    width: 500px;
+}
+
+.ui-sortable-sub-placeholder {
+    background: #F90!important;
+    visibility: visible !important;
+    height: 2px !important;
     width: 500px;
 }
