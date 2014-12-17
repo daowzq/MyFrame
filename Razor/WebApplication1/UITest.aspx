@@ -19,17 +19,6 @@
         .uploader input[type='file'] {
             display: none;
         }
-
-        .topmenue {
-            width: 990px;
-            position: fixed;
-            display: block;
-            top: 0px;
-            z-index: 9999;
-            height: 65px;
-            border: none;
-            background-color: #1c658b;
-        }
     </style>
     <script type="text/javascript">
         $(function () {

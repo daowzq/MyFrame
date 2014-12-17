@@ -44,9 +44,9 @@ a {
     margin-right: auto;
     background-color: white;
 }
-
+/*距顶部工具栏高度*/
 .container-fluid {
-    margin: 70px auto;
+    margin: 60px auto;
     width: 990px;
     position: relative;
 }
@@ -61,8 +61,7 @@ ul li {
     width: 150px;
     float: left;
     display: inline;
-    border: 1px solid;
-    border-color: #e3e3e3;
+    border: 1px solid #e3e3e3;
     background-color: #f5f5f5;
     border-radius: 4px;
     position: fixed;
@@ -625,7 +624,19 @@ table .topic_ul {
     border-width: 0px!important;
     opacity: 1;
 }
-
+/*顶部工具栏*/
+.topmenue {
+    width: 989px;
+    position: fixed;
+    display: block;
+    top: 0px;
+    z-index: 9999;
+    height: 55px;
+    border: solid 1px #e3e3e3;
+    border-top: none;
+    /*background-color: #1c658b;*/
+    background-color: #fff;
+}
 /*拖拽时holder样式*/
 .ui-sortable-placeholder {
     background: #F90!important;
