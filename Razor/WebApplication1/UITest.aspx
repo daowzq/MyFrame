@@ -274,7 +274,7 @@
                         <a href="javascript:;" title="微信关注" style="background: url(images/wxpic.jpg) no-repeat scroll 0px 0px transparent;"></a>
                     </div>
                     <h4 name="project" class="h4-bg T_edit p_title">你的上班有什么看法</h4>
-                    <table class="table1 bg-m">
+                    <table class="table1 table-desc">
                         <tbody>
                             <tr>
                                 <td class="rb">&nbsp;</td>
@@ -308,7 +308,7 @@
                                         </li>
                                         <li style="margin-top: 5px;" class="ui-state-disabled">
                                             <span style="display: block; margin-top: 2px">其他建议：</span>
-                                            <textarea style="margin-top: 5px; width: 230px;" rows="3"></textarea>
+                                            <textarea class="txt-border" style="margin-top: 5px; width: 230px;" rows="3"></textarea>
                                         </li>
                                     </ul>
                                     <div class="operationH"><a href="javascript:;" style="display: block;"><i title="添加选项" class="add-icon-active"></i></a><a class="Bub" href="javascript:;" title="批量添加" style="display: block;"><i class="clone-icon-active"></i></a></div>
@@ -461,7 +461,7 @@
                                         <li style="overflow: inherit;">
                                             <div class="option_Fill">
                                                 <div style="display: none;" class="min_an"><i></i></div>
-                                                <input style="width: 300px; height: 30px;" value="" type="text" />
+                                                <input class="txt-border" style="width: 300px; height: 30px;" value="" type="text" />
                                             </div>
                                         </li>
                                     </ul>
@@ -483,10 +483,9 @@
                                         <div class="th4 T_edit q_title" name="question">你对过年有什么看法吗?</div>
                                     </div>
                                     <ul class="unstyled">
-                                        <li style="overflow: inherit;">
+                                        <li>
                                             <div class="option_Fill">
-                                                <div style="display: none;" class="min_an"><i></i></div>
-                                                <textarea cols="40" rows="5" style="border: solid 1px #dbdbdb;" type="text"></textarea>
+                                                <textarea class="txt-border" cols="40" rows="5"></textarea>
                                             </div>
                                         </li>
                                     </ul>

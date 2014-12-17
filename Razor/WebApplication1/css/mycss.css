@@ -69,11 +69,7 @@ ul li {
 }
 
 .Drag_area {
-    width: 768px;
     cursor: move;
-    z-index: 9;
-    padding: 5px 0 0 10px;
-    margin: -10px 0 0 -10px;
 }
 
 .well {
@@ -336,10 +332,9 @@ table {
     border-style: solid;
 }
 
-.bg-m.table1 {
-    margin-top: 10px;
+.table-desc {
+    margin: 10px 0px;
     background-image: none;
-    background-attachment: scroll;
     background-repeat: repeat;
     background-size: auto;
     background-origin: padding-box;
@@ -414,22 +409,19 @@ table {
 }
 
 .setup-group h4 {
+    margin-top: 5px;
     text-align: center;
 }
 
 .ui-sortable {
-    margin-top: 20px;
-}
-
-input {
-    border: solid 1px #d2d2d2;
+    margin-top: 5px;
 }
 
 .unstyled li {
     margin-top: 5px;
     overflow: hidden;
 }
-
+/*图片项*/
 .Imgli li {
     display: inline-block;
     vertical-align: top;
@@ -472,7 +464,7 @@ input {
 }
 
 .module {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background-color: #fff;
 }
 
@@ -654,4 +646,9 @@ table .topic_ul {
     background: #Fff;
     visibility: visible !important;
     border: dotted 1px #ccc;
+}
+
+/*input textarea 边框*/
+.txt-border {
+    border: solid 1px #77a5b4;
 }
