@@ -648,3 +648,10 @@ table .topic_ul {
     height: 2px !important;
     width: 500px;
 }
+/*图片拖拽时holder样式*/
+
+.ui-img-placeholder {
+    background: #Fff;
+    visibility: visible !important;
+    border: dotted 1px #ccc;
+}

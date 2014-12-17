@@ -27,7 +27,7 @@
             top: 0px;
             z-index: 9999;
             height: 65px;
-            border: solid 1px red;
+            border: none;
             background-color: #1c658b;
         }
     </style>
@@ -114,7 +114,18 @@
             $(".unstyled").sortable({
                 tolerance: 'pointer',
                 placeholder: "ui-sortable-sub-placeholder",
-                items: "li:not(.ui-state-disabled)" //排除选项
+                items: "li:not(.ui-state-disabled)", //排除选项
+                delay: 100,
+                opacity: 0.9,
+                start: function (event, ui) {
+                    //图片项
+                    if (ui.helper.parent().hasClass("Imgli")) {
+                        //  ui - sortable - sub - placeholder 
+                        var itemWidth = ui.helper.width() + 1;
+                        var itemHeight = ui.helper.height() + 1;
+                        ui.placeholder.attr("class", "ui-img-placeholder").css({ "width": itemWidth + "px", "height": itemHeight })
+                    }
+                }
             });
             $(".unstyled").disableSelection();
 
@@ -126,7 +137,7 @@
                     ui.helper.html('').css({
                         'height': 'auto'
                     }).addClass("anbx-sub").append(QUESTIONMAP[questionType]);
-                },
+                }
             });
         });
     </script>
@@ -354,24 +365,22 @@
                                         <li>
                                             <div class="questionImgBox">
                                                 <div class="QImgCon">
-                                                    <img src="./demo/545a2033f7405b328c3682c0_thumbnail.jpg">
+                                                    <img src="./demo/545a2033f7405b328c3682c0_thumbnail.jpg" />
                                                 </div>
                                                 <input id="Radio3" name="radio" type="radio" />
                                                 <label id="Label3" class="T_edit_min" for="">图片1</label>
                                             </div>
                                         </li>
-                                        <li class="dragZone">
+                                        <li class="ui-state-disabled">
                                             <div class="questionImgBox abor">
                                                 <div style="display: none;" class="AddQImgCon">
                                                     <div class="uploader">
-                                                        <label>
-                                                            <input title="Click to add Files" name="files[]" type="file" multiple="multiple" /></label>
+                                                        <input title="Click to add Files" name="files[]" type="file" multiple="multiple" />
                                                     </div>
                                                 </div>
                                                 <div style="display: block;" class="AddQImgCon">
                                                     <div class="file-box">
                                                         <form id="logo_uploader_form" enctype="multipart/form-data" method="POST" action="">
-                                                            <iframe style="left: 0px; top: 0px; width: 100%; height: 100%; filter: alpha(opacity = 0); position: absolute; opacity: 0; -moz-opacity: 0; -khtml-opacity: 0;" id="imgUpload" class="uploadfile" src="./demo/saved_resource.htm"></iframe>
                                                             <div class="WJButton wj_blue">上传</div>
                                                         </form>
                                                     </div>
@@ -413,18 +422,17 @@
                                                 <input name="checkbox" type="checkbox" /><label id="Label5" class="T_edit_min" for="" name="option">图片2</label>
                                             </div>
                                         </li>
-                                        <li class="dragZone">
+                                        <li class="ui-state-disabled">
                                             <div class="questionImgBox abor">
                                                 <div style="display: none;" class="AddQImgCon">
                                                     <div class="uploader">
                                                         <label>
-                                                            <input title="Click to add Files" name="files[]" type="file" multiple="multiple"></label>
+                                                            <input title="Click to add Files" name="files[]" type="file" multiple="multiple" /></label>
                                                     </div>
                                                 </div>
                                                 <div style="display: block;" class="AddQImgCon_ie">
                                                     <div class="file-box">
                                                         <form id="Form1" enctype="multipart/form-data" method="POST" action="">
-                                                            <iframe style="left: 0px; top: 0px; width: 100%; height: 100%; filter: alpha(opacity = 0); position: absolute; opacity: 0; -moz-opacity: 0; -khtml-opacity: 0;" id="Iframe1" class="uploadfile" src="./demo/saved_resource(1).htm"></iframe>
                                                             <div class="WJButton wj_blue ">上传</div>
                                                         </form>
                                                     </div>
@@ -552,7 +560,7 @@
                                     <div class="Drag_area">
                                         <div class="th4 T_edit q_title" name="question">程序员的工作效率</div>
                                     </div>
-                                    <div class="grade">
+                                    <div class="grade ">
                                         <table cellspacing="0" cellpadding="0">
                                             <thead>
                                                 <tr>
@@ -675,7 +683,7 @@
                                         <div class="th4 T_edit q_title" name="question">关于节假日安排你的意见</div>
                                     </div>
                                     <ul class="unstyled">
-                                        <li>
+                                        <li class="ui-state-disabled">
                                             <div class="matrix">
                                                 <table style="width: 682px;" class="table table-bordered td-Tc" cellspacing="0" cellpadding="0">
                                                     <tbody>
@@ -765,7 +773,7 @@
                                         <div class="th4 T_edit q_title" name="question">矩阵填空题</div>
                                     </div>
                                     <ul class="unstyled">
-                                        <li>
+                                        <li class="ui-state-disabled">
                                             <div class="matrix">
                                                 <table class="table table-bordered td-Tc" cellspacing="0" cellpadding="0">
                                                     <tbody>
