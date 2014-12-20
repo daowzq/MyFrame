@@ -8,8 +8,8 @@
     <link href="css/mycss.css" rel="stylesheet" />
     <link href="css/gototop.css" rel="stylesheet" />
     <title></title>
-    <script src="js/jquery-1.6.1.js"></script>
-    <script src="SurveyUI/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
     <script src="js/JqueryUI/js/jquery-ui-1.10.4.custom.js"></script>
     <link href="js/layer/skin/layer.css" rel="stylesheet" />
     <script src="js/layer/layer.min.js"></script>
@@ -116,18 +116,132 @@
                     }
                 }
             });
-            $(".unstyled").disableSelection();
+            // $(".unstyled").disableSelection();//因为要选中，尽量设置文字不选中
 
             //补充说明项放置
-            $(".moduleD[name='APPEND_TXT']").draggable({
+            $(".moduled[name='append_txt']").draggable({
                 helper: "clone",
                 start: function (event, ui) {
-                    var questionType = ui.helper.attr("name");
+                    var questiontype = ui.helper.attr("name");
                     ui.helper.html('').css({
                         'height': 'auto'
-                    }).addClass("anbx-sub").append(QUESTIONMAP[questionType]);
+                    }).addclass("anbx-sub").append(questionmap[questiontype]);
                 }
             });
+
+            //题目设置
+            //显示设置
+            $('.dragwen .module').live("mouseover", function () {
+
+                $(this).find('.setup-group a,.updown,.operationH a,.operationV a').show();
+
+            }).live('mouseout', function () {
+                $(this).find('.setup-group a,.updown,.operationH a,.operationV a').hide()
+            });
+
+
+            //上下移动
+            $('.up-icon-active').live('click', function () {
+                var $obj = $(this).parents('li');
+                var index = $('.dragwen > li').index($obj);
+
+                if (index === 0) {
+                    layer.msg('已经第一道题', 1, 0);
+                    return;
+                }
+
+                $(".dragwen").find('.module:eq(' + (index - 1) + ')').before($obj[0]);
+                $("html,body").animate({
+                    scrollTop: ($obj.offset().top - 100)
+                }, 'slow');
+            });
+
+            $('.down-icon-active').live('click', function () {
+
+                var $obj = $(this).parents('li');
+                var sortIndex = $(".dragwen> li").index($obj);
+                var length = $(".dragwen .module").length - 1;
+
+                if (sortIndex === length) {
+                    layer.msg('已经是最后一道题', 1, 0);
+                    return;
+                }
+
+                $(".dragwen").find('.module:eq(' + (sortIndex + 1) + ')').after($obj[0]);
+
+                if ($obj.offset().top !== 0) {
+                    $("html,body").animate({
+                        scrollTop: ($obj.offset().top - 100)
+                    }, 'slow');
+                }
+            });
+
+            /*添加&批量添加选项*/
+            function AddOrBatch() {
+                return this.events();
+            }
+            AddOrBatch.prototype = {
+                events: function () {
+                    var _this = this;
+                    //添加单条行
+                    $('.operationH .add-icon-active').live('click', function () {
+                        _this.module = $(this).parents('.module');
+                        // var issue = _this.module.attr('issue');
+                        var cols_count = 0;
+                        var disp_type = _this.module.attr('disp_type');
+                        if (disp_type == 'column') { cols_count = _this.module.attr('cols_count') }
+                        _this.addItemY(oid, issue, 1, cols_count);
+                    });
+                    //添加多条行
+                    $('.Batch_push').live('click', function () {
+                        var oid = $(this).parents('.poplayer').attr('oid');
+                        _this.module = $('.module[oid=' + oid + ']');
+                        var issue = _this.module.attr('issue');
+                        var cols_count = 0;
+                        var disp_type = _this.module.attr('disp_type');
+                        if (disp_type == 'column') { cols_count = _this.module.attr('cols_count') }
+
+                        //如果是默认选项则取消提交
+                        if ($('.poplayer[oid=' + oid + '] .bulkadd').is('.def_class')) {
+                            $('.jsTip_close').click();
+                            return;
+                        }
+                        _this.addItemY(oid, issue, 2, cols_count);
+                    });
+
+                    //添加单条列
+                    $('.operationV .add-icon-active').live('click', function () {
+                        _this.module = $(this).parents('.module');
+                        var oid = _this.module.attr('oid');
+                        var issue = _this.module.attr('issue');
+                        _this.addItemX(oid, issue, 1);
+                    });
+                    //添加多条列
+                    $('.Batch_push_v').live('click', function () {
+                        var oid = $(this).parents('.poplayer').attr('oid');
+                        _this.module = $('.module[oid=' + oid + ']');
+                        var issue = _this.module.attr('issue');
+
+                        //如果是默认选项则取消提交
+                        if ($('.poplayer[oid=' + oid + '] .bulkadd').is('.def_class')) {
+                            $('.jsTip_close').click();
+                            return;
+                        }
+
+                        _this.addItemX(oid, issue, 2);
+                    });
+                },
+                /*添加行*/
+                addItemY: function () {
+
+                },
+                /*添加列*/
+                addItemX: function () {
+
+                }
+            }
+            //添加选项
+            var addOrBatch = new AddOrBatch();
         });
     </script>
 </head>
@@ -275,13 +389,12 @@
                     </table>
 
                     <ul class="dragwen ui-sortable" id="question_box">
-
                         <li class="module">
                             <div class="topic_type">
                                 <div class="topic_type_menu">
                                     <div class="setup-group">
                                         <h4>Q1</h4>
-                                        <a class="Bub" href="javascript:;" title="题目设置" style="display: block;"><i class="setup-icon-active"></i></a><a class="Bub" href="javascript:;" title="逻辑设置" style="display: block;"><i class="link-icon-active"></i></a><a class="Bub" href="javascript:;" title="题目复制" style="display: block;"><i class="copy-icon-active"></i></a><a class="Del" href="javascript:;" title="题目删除" style="display: block;"><i class="del2-icon-active"></i></a>
+                                        <a style="display: none;" class="Bub" title="题目设置" href="javascript:;"><i class="setup-icon-active"></i></a><a style="display: none;" class="Bub" title="逻辑设置" href="javascript:;"><i class="link-icon-active"></i></a><a style="display: none;" class="Bub" title="题目复制" href="javascript:;"><i class="copy-icon-active"></i></a><a style="display: none;" class="Del" title="题目删除" href="javascript:;"><i class="del2-icon-active"></i></a>
                                     </div>
                                 </div>
                                 <div class="topic_type_con">
@@ -293,7 +406,7 @@
                                             <input type="radio" /><label class="T_edit_min" for="">选项1</label></li>
                                         <li style="">
                                             <input type="radio" /><label class="T_edit_min" for="">选项2</label>
-                                            <input type="text" style="margin-left: 2px; border: 0; border-bottom: 1px solid black; background: #fff;" />
+                                            <input type="text" style="margin-left: 2px; width: 200px; border: 0; border-bottom: 1px solid black; background: #fff;" />
                                         </li>
                                         <li style="margin-top: 5px;" class="ui-state-disabled">
                                             <span style="display: block; margin-top: 2px">其他建议：</span>
@@ -450,7 +563,7 @@
                                         <li style="overflow: inherit;">
                                             <div class="option_Fill">
                                                 <div style="display: none;" class="min_an"><i></i></div>
-                                                <input class="txt-border" style="width: 300px; height: 30px;" value="" type="text" />
+                                                <input class="txt-border" style="width: 300px; height: 24px;" value="" type="text" />
                                             </div>
                                         </li>
                                     </ul>

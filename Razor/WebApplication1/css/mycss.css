@@ -398,14 +398,22 @@ table {
     position: absolute;
 }
 
+    .topic_type_menu i {
+        margin-top: 5px;
+        margin-left: 12px;
+    }
+
+
 .topic_type_con {
     padding: 8px;
     margin-left: 50px;
     border-left-color: #dbdbdb;
     border-left-width: 1px;
     border-left-style: solid;
-    min-height: 40px;
+    min-height: 130px;
 }
+
+
 
 .setup-group h4 {
     margin-top: 5px;
@@ -656,10 +664,89 @@ table .topic_ul {
 .ui-img-placeholder {
     background: #Fff;
     visibility: visible !important;
-    border: dotted 1px #ccc;
+    border: dotted 2px #f90;
 }
 
 /*input textarea 边框*/
 .txt-border {
     border: solid 1px #77a5b4;
+}
+
+/*-题型鼠标滑过*/
+.setup-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -20px -120px;
+}
+
+.link-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -20px -140px;
+}
+
+.zoom-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -20px -160px;
+}
+
+.copy-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -19px -360px;
+}
+
+.del2-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -20px -180px;
+}
+
+.add-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -20px -200px;
+}
+
+.clone-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -20px -220px;
+}
+
+.up-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -60px -199px;
+}
+
+.down-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -80px -203px;
+}
+
+.logic-icon-active {
+    width: 20px;
+    height: 20px;
+    background-position: -40px -160px;
+}
+
+/*上移下移本题*/
+.updown {
+    display: none;
+    width: 18px;
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    background: #fff;
+    border-top: 1px solid #DBDBDB;
+    border-right: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+    /*border:1px solid #1c658b;*/
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin-top: -22px;
 }

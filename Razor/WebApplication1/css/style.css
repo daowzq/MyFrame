@@ -2882,3 +2882,8 @@ a {
     color: #666666;
     border-bottom: 1px solid #dcdcdc;
 }
+
+[class^="-icon-active"]:hover,
+[class*="-icon-active"]:hover {
+    background-image: url("/static/images/wjsj_toolico.png");
+}
