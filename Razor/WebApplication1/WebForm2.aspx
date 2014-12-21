@@ -2,16 +2,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CKEditor</title>
+        <script src="js/ckeditor_Full/ckeditor.js"></script>
+
+    </head>
+    <body>
+        <textarea name="editor1"></textarea>
+        <script>
+            CKEDITOR.replace('editor1');
+        </script>
+    </body>
 </html>

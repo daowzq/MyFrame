@@ -14,15 +14,6 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            SearchCriterion _searchCriterion = new HqlSearchCriterion();
-            _searchCriterion.AllowPaging = true;
-            _searchCriterion.GetRecordCount = true;
-
-            SurveyQuestion[] arr = SurveyQuestion.FindAll(_searchCriterion);
-            string str = Razor.JsonHelper.GetJsonString(arr);
-            //   Response.Write(Razor.JsonHelper.GetJsonString(arr));
-            Response.Write(str);
-            // Response.Write("<br/>fasdfsdfasdf");
         }
     }
 }

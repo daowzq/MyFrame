@@ -96,7 +96,10 @@
     <Content Include="demo\init.js" />
     <Content Include="demo\Jcrop.css" />
     <Content Include="demo\Jcrop.js" />
-    <Content Include="demo\jquery-migrate-1.2.1.js" />
+    <Content Include="js\ckeditor.js" />
+    <Content Include="js\jquery-1.9.1.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
+    <Content Include="js\jquery-migrate-1.2.1.js" />
     <Content Include="demo\jquery-ui-1.10.min.js" />
     <Content Include="demo\jquery.cookie.js" />
     <Content Include="demo\jquery.js" />

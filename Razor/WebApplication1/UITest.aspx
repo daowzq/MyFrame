@@ -15,6 +15,7 @@
     <script src="js/layer/layer.min.js"></script>
     <script src="js/surveyTemplate.js"></script>
     <script src="js/common.js"></script>
+    <script type="text/javascript" src="js/ckeditor.js"></script>
     <style type="text/css">
         .uploader input[type='file'] {
             display: none;
@@ -176,6 +177,184 @@
                 }
             });
 
+
+
+            //文字编辑
+
+            function TextEdit() {
+                this.obj = ''; //被编辑对象
+                this.parentCon = {}; //编辑框
+                this.addEdit = {}; //编辑框内容
+                this.button = {}; //菜单按钮 
+                this.fast_machine = {}; //快速操作按钮
+                this.html = '';
+                this.editor = ''; //FCK编辑器状态
+                this.Tinfo = {};
+                this.type = '';
+                this.id = '';
+                this.option_id = '';
+                this.Cw = '';
+            }
+
+            TextEdit.prototype = {
+                //标题类型编辑
+                T_edit: function () {
+                    var _this = this;
+
+                    $('.T_edit').live('click', function () {
+
+                    });
+                },
+
+                //li结构编辑
+                T_edit_li: function () {
+
+
+                },
+                //td结构编辑
+                T_edit_td: function () {
+
+
+                },
+                //保存编辑
+                Save_title: function () {
+
+                },
+                //生成标准编辑框
+                ConEdit: function (obj, menu_list) {
+
+
+                },
+                //生成小号编辑框
+                ConEdit_min: function (obj, menu_list) {
+                },
+                //粘贴内容格式去除
+                GetRidFormat: function (obj) {
+
+                    EventUtil.addHandler(obj[0], "paste", function (event) {
+
+                        setTimeout(function () {
+                            var html = obj.html();
+                            html = html.replace(/<\/?[^>(IMG)(img)][^>]*>/g, '');
+                            obj.html(html);
+                        }, 50);
+
+                    });
+
+                    function DgContents(htt) {
+
+                        htt = htt.replace(/<\/?SPAN[^>]*>/gi, "");
+                        htt = htt.replace(/<(\w[^>]*) class=([^ |>]*)([^>]*)/gi, "<$1$3");
+                        htt = htt.replace(/<(\w[^>]*) style="([^"]*)"([^>]*)/gi, "<$1$3");
+                        htt = htt.replace(/<(\w[^>]*) lang=([^ |>]*)([^>]*)/gi, "<$1$3");
+                        htt = htt.replace(/<\\?\?xml[^>]*>/gi, "");
+                        htt = htt.replace(/<\/?\w+:[^>]*>/gi, "");
+                        htt = htt.replace(/&nbsp;/, " ");
+                        var re = new RegExp("(<P)([^>]*>.*?)(<\/P>)", "gi"); // Different because of a IE 5.0 error
+                        htt = htt.replace(re, "<div$2</div>");
+                        return htt;
+                    }
+
+                },
+                //插入图片_菜单
+                addImg: function (data) {
+                    if (!data.error_msg == "") {
+                        loadMack({ off: 'on', Limg: 0, text: data.error_msg, set: 2500 });
+                        return false;
+                    }
+                    var editImg = $('<img src="' + data.img_url + '">').appendTo(this.addEdit);
+                    //this.button.click();
+                    //设置图片大小
+                    new ImgEditSize(editImg);
+                    //imgEditSize.main(editImg);
+                },
+                //生成菜单
+                menu: function (x, y, Obj) {
+                },
+
+                //删除选项
+                Del_edit: function (only_Dom) {
+
+                },
+                //创建弹出框
+                EditTcc: function (conw, conh) {
+
+                },
+
+                //li结构向上移动
+                EdUp_li: function (conw, conh) {
+
+
+                },
+                //li结构向下移动
+                EdDn_li: function (conw, conh) {
+
+
+
+                },
+                //td结构向上移动
+                EdUp_td: function (conw, conh) {
+
+
+                },
+                //td结构向下移动
+                EdDn_td: function (conw, conh) {
+
+                },
+                //td结构向左移动
+                EdLeft_td: function (conw, conh) {
+
+                },
+                //td结构向右移动
+                EdRight_td: function (conw, conh) {
+
+
+                },
+                Tcc_ajax: function () {
+
+                },
+                //创建上传图片弹出框
+                UpdataImageTcc: function (conw, conh) {
+
+                },
+                //创建FCK高级编辑器
+                createEditor: function (con, obj) {
+
+                }
+
+            }
+            //js原生事件注册
+            var EventUtil = {
+
+                //增加事件处理函数
+                addHandler: function (element, type, handler) {
+                    if (element.addEventListener) {
+                        element.addEventListener(type, handler, false);
+                    } else if (element.attachEvent) {
+                        element.attachEvent("on" + type, handler);
+                    } else {
+                        element["on" + type] = handler;
+                    }
+                },
+                //移除事件处理函数    
+                removeHandler: function (element, type, handler) {
+                    if (element.removeEventListener) {
+                        element.removeEventListener(type, handler, false);
+                    } else if (element.detachEvent) {
+                        element.detachEvent("on" + type, handler);
+                    } else {
+                        element["on" + type] = null;
+                    }
+                }
+            }
+
+            ////文字编辑
+            //var textEdit = new TextEdit();
+            //textEdit.T_edit();
+            //textEdit.T_edit_li();
+            //textEdit.T_edit_td();
+
+
             /*添加&批量添加选项*/
             function AddOrBatch() {
                 return this.events();
@@ -186,11 +365,10 @@
                     //添加单条行
                     $('.operationH .add-icon-active').live('click', function () {
                         _this.module = $(this).parents('.module');
-                        // var issue = _this.module.attr('issue');
-                        var cols_count = 0;
-                        var disp_type = _this.module.attr('disp_type');
-                        if (disp_type == 'column') { cols_count = _this.module.attr('cols_count') }
-                        _this.addItemY(oid, issue, 1, cols_count);
+
+                        var items = _this.module.find("li[class!='ui-state-disabled']");//问题内容项
+                        var questType = _this.module.attr('name').toUpperCase();
+                        _this.addItems(questType, "H", items.length, items);
                     });
                     //添加多条行
                     $('.Batch_push').live('click', function () {
@@ -206,7 +384,7 @@
                             $('.jsTip_close').click();
                             return;
                         }
-                        _this.addItemY(oid, issue, 2, cols_count);
+                        _this.addItems(oid, issue, 2, cols_count);
                     });
 
                     //添加单条列
@@ -214,7 +392,7 @@
                         _this.module = $(this).parents('.module');
                         var oid = _this.module.attr('oid');
                         var issue = _this.module.attr('issue');
-                        _this.addItemX(oid, issue, 1);
+                        _this.addItems(oid, issue, 1);
                     });
                     //添加多条列
                     $('.Batch_push_v').live('click', function () {
@@ -228,16 +406,46 @@
                             return;
                         }
 
-                        _this.addItemX(oid, issue, 2);
+                        _this.addItems(oid, issue, 2);
                     });
                 },
                 /*添加行*/
-                addItemY: function () {
+                addItems: function (questType, layout, num, items) {
 
-                },
-                /*添加列*/
-                addItemX: function () {
+                    if (questType == "SINGLE") {
+                        var html = '<li style=""><input name="radio" type="radio"><label  name="option" class="T_edit_min">选项' + (num + 1) + '</label></li>';
+                        $(items[items.length - 1]).after(html);
+                        $(items[items.length]).click(); //触发创建文本编辑框
+                    }
+                    if (questType == "MUTIPLE") {
+                    }
+                    if (questType == "IMGSINGLE") {
+                    }
+                    if (questType == "IMGMULTIPLE") {
+                    }
+                    if (questType == "ORDER") {
+                    }
+                    if (questType == "SCORE") {
+                    }
+                    if (questType == "MULTIPLE_BLANK") {
+                    }
+                    if (questType == "MATRIX_SINGLE") {
+                    }
+                    if (questType == "MATRIX_MULTIPLE") {
+                    }
+                    if (questType == "MATRIX_BLANK") {
+                    }
+                    if (questType == "MATRIX_SCORE") {
+                    }
+                    if (questType == "DESC") {
+                    }
+                    if (questType == "PAGE") {
+                    }
+                    if (questType == "APPEND_TXT") {
 
+                    }
+                    if (questType == "APPEND_TXTAREA") {
+                    }
                 }
             }
             //添加选项
@@ -389,7 +597,7 @@
                     </table>
 
                     <ul class="dragwen ui-sortable" id="question_box">
-                        <li class="module">
+                        <li class="module" name="SINGLE">
                             <div class="topic_type">
                                 <div class="topic_type_menu">
                                     <div class="setup-group">
