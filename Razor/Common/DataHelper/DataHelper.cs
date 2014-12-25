@@ -12,9 +12,9 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 
-namespace DataModel
+namespace Razor.Data
 {
-    public class DataModelHelper
+    public class DataHelper
     {
         // Methods
         public static void CopyDataToDatabase(DataTable dt, SqlConnection sqlConn, string targetTable)
