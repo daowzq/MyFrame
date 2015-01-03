@@ -750,3 +750,24 @@ table .topic_ul {
     border-radius: 2px;
     margin-top: -22px;
 }
+/*题型编辑*/
+.zon_edit {
+    background: #fff;
+}
+
+    .zon_edit a {
+        display: inline-block;
+    }
+
+.Cw {
+    display: none;
+    border: 1px solid #1C658B;
+}
+
+.add_edit {
+    border: 1px solid #1C658B;
+    background: #FDF9CD;
+    z-index: 212;
+    position: absolute;
+    outline: none;
+}

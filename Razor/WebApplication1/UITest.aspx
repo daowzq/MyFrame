@@ -199,10 +199,22 @@
             TextEdit.prototype = {
                 //标题类型编辑
                 T_edit: function () {
-                    var _this = this;
+                    var me = this;
 
                     $('.T_edit').live('click', function () {
-
+                        me.obj = $(this);
+                        var menuObj = {
+                            yy: false,
+                            sz: false,
+                            line: false,
+                            Del: false,
+                            Up: false,
+                            Dn: false,
+                            Left: false,
+                            Right: false,
+                            lj: false
+                        }
+                        me.ConEdit(me.obj, menuObj);
                     });
                 },
 
@@ -222,7 +234,53 @@
                 },
                 //生成标准编辑框
                 ConEdit: function (obj, menu_list) {
+                    var me = this;
+                    me.html = obj.html();
 
+                    var mbWidth = obj.width() < 500 ? 500 : (obj.width() > 750 ? 750 : obj.width());
+                    var mbHeight = obj.height() < 30 ? 30 : obj.height();
+
+                    var style = obj.attr('class').split(" ");
+                    var addstyle = '';
+
+                    for (var i = 0; i < style.length; i++) {
+                        if (style[i] !== "T_edit") {
+                            addstyle += style[i] + " "
+                        }
+                    }
+
+                    me.fast_machine = $();
+                    me.parentCon = $('<div class="zon_edit"></div>');
+                    me.addEdit = $('<div class="add_edit" contentEditable="true">' + me.html + '</div>');
+
+                    me.parentCon.append(_this.menu(-32, 37, menu_list));
+                    //_this.parentCon.append(_this.button);
+                    me.parentCon.append(_this.addEdit);
+
+                    me.addEdit.attr('style', obj.attr('style'));
+                    me.addEdit.addClass(addstyle);
+                    me.parentCon.css({
+                        'width': mbWidth + 'px',
+                        'minHeight': mbHeight + 'px',
+                        'position': 'absolute',
+                        'top': obj.offset().top - 1 + 'px',
+                        'left': obj.offset().left - 1 + 'px'
+                    });
+                    me.addEdit.css({
+                        //'width':mbWidth+'px',
+                        //'minHeight':mbHeight+'px'
+                        //'padding':'4px 0 0 0',
+                        'minHeight': 30 + 'px'
+                    });
+                    //输出编辑框
+                    $('body').append(_this.parentCon);
+                    // alert(_this.parentCon.html());
+                    me.addEdit.focus(); //焦点
+
+                    me.GetRidFormat(_this.addEdit);
+
+                    //设置图片大小
+                    // new ImgEditSize(_this.addEdit.find('img'));
 
                 },
                 //生成小号编辑框
@@ -242,7 +300,6 @@
                     });
 
                     function DgContents(htt) {
-
                         htt = htt.replace(/<\/?SPAN[^>]*>/gi, "");
                         htt = htt.replace(/<(\w[^>]*) class=([^ |>]*)([^>]*)/gi, "<$1$3");
                         htt = htt.replace(/<(\w[^>]*) style="([^"]*)"([^>]*)/gi, "<$1$3");
@@ -348,9 +405,9 @@
                 }
             }
 
-            ////文字编辑
-            //var textEdit = new TextEdit();
-            //textEdit.T_edit();
+            //文字编辑
+            var textEdit = new TextEdit();
+            textEdit.T_edit();
             //textEdit.T_edit_li();
             //textEdit.T_edit_td();
 
