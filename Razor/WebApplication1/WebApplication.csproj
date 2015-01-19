@@ -754,8 +754,6 @@
     <Content Include="Ext_4.2\ext-theme-neptune.js" />
     <Content Include="Ext_4.2\ext.js" />
     <Content Include="Ext_4.2\file-header.js" />
-    <Content Include="Ext_4.2\index.html" />
-    <Content Include="Ext_4.2\license.txt" />
     <Content Include="Ext_4.2\locale\ext-lang-af.js" />
     <Content Include="Ext_4.2\locale\ext-lang-bg.js" />
     <Content Include="Ext_4.2\locale\ext-lang-ca.js" />
@@ -4249,7 +4247,6 @@
     <Content Include="Ext_4.2\packages\ext-theme-neutral\sass\example\theme.html" />
     <Content Include="Ext_4.2\plugins\flash\FlashPlugin.swf" />
     <Content Include="Ext_4.2\plugins\flash\swfobject.js" />
-    <Content Include="Ext_4.2\release-notes.html" />
     <Content Include="Ext_4.2\resources\css\ext-all-access-debug.css" />
     <Content Include="Ext_4.2\resources\css\ext-all-access-rtl-debug.css" />
     <Content Include="Ext_4.2\resources\css\ext-all-access-rtl.css" />
