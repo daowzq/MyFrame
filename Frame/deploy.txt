@@ -1,0 +1,2 @@
+/******部署说明***********
+1 将newtonsfot.json.dll (Ext.Net需要v6.0) 注册到GAC （gacutil 命令）

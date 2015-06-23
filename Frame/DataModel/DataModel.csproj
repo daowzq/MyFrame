@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1F4578D-D3E5-41DA-B8AC-72021B313E45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataModel</RootNamespace>
+    <AssemblyName>DataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.ActiveRecord">
+      <HintPath>..\DHFrame\Lib\Castle.ActiveRecord.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator">
+      <HintPath>..\DHFrame\Lib\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\DHFrame\Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\DHFrame\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\DHFrame\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\DHFrame\Lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\library\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\DHFrame\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\DHFrame\Lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Search">
+      <HintPath>..\DHFrame\Lib\NHibernate.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Generate\Employee.cs" />
+    <Compile Include="Generate\PartialG\TestProduct.g.cs" />
+    <Compile Include="Generate\Partial\TestProduct.cs" />
+    <Compile Include="System\SysDict.cs" />
+    <Compile Include="System\SysDict.g.cs" />
+    <Compile Include="System\SysFile.cs" />
+    <Compile Include="System\SysFile.g.cs" />
+    <Compile Include="System\SysGroupAuth.cs" />
+    <Compile Include="System\SysGroupAuth.g.cs" />
+    <Compile Include="System\SysGroupOrRole.cs" />
+    <Compile Include="System\SysGroupOrRole.g.cs" />
+    <Compile Include="System\SysGroupUser.cs" />
+    <Compile Include="System\SysGroupUser.g.cs" />
+    <Compile Include="System\SysLog.cs" />
+    <Compile Include="System\SysLog.g.cs" />
+    <Compile Include="System\SysModule.cs" />
+    <Compile Include="System\SysModule.g.cs" />
+    <Compile Include="IDGenerator.cs" />
+    <Compile Include="ModelBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\SysOrganization.cs" />
+    <Compile Include="System\SysOrganization.g.cs" />
+    <Compile Include="System\SysOrgAuth.cs" />
+    <Compile Include="System\SysOrgAuth.g.cs" />
+    <Compile Include="System\SysOrgGroupOrRole.cs" />
+    <Compile Include="System\SysOrgGroupOrRole.g.cs" />
+    <Compile Include="System\SysOrgRefGroupOrRole.cs" />
+    <Compile Include="System\SysOrgRefGroupOrRole.g.cs" />
+    <Compile Include="System\SysOrgUser.cs" />
+    <Compile Include="System\SysOrgUser.g.cs" />
+    <Compile Include="System\SysRegister.cs" />
+    <Compile Include="System\SysRegister.g.cs" />
+    <Compile Include="System\SysUser.cs" />
+    <Compile Include="System\SysUser.g.cs" />
+    <Compile Include="System\SysUserAuth.cs" />
+    <Compile Include="System\SysUserAuth.g.cs" />
+    <Compile Include="System\SysUserModuleList.cs" />
+    <Compile Include="System\SysUserModuleList.g.cs" />
+    <Compile Include="UserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Razor.csproj">
+      <Project>{e2d4cdfb-2816-44cb-a69b-5b2074cc17e4}</Project>
+      <Name>Razor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

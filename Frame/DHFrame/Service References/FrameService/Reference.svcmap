@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c48bafa7-68e8-4926-9473-eabb8dd24c39" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8077/Services/ModuleAuth.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ModuleAuth1.wsdl" MetadataType="Wsdl" ID="e217c27b-8810-4d5d-8abb-74df3c41861f" SourceId="1" SourceUrl="http://localhost:8077/Services/ModuleAuth.svc?wsdl" />
+    <MetadataFile FileName="ModuleAuth1.disco" MetadataType="Disco" ID="7d37cd2d-b330-401f-b8db-afc047d27927" SourceId="1" SourceUrl="http://localhost:8077/Services/ModuleAuth.svc?disco" />
+    <MetadataFile FileName="ModuleAuth4.xsd" MetadataType="Schema" ID="9827564c-327c-4fe8-871a-d71ec4063154" SourceId="1" SourceUrl="http://localhost:8077/Services/ModuleAuth.svc?xsd=xsd3" />
+    <MetadataFile FileName="ModuleAuth41.xsd" MetadataType="Schema" ID="d34af173-ef5e-4b01-9562-127632156033" SourceId="1" SourceUrl="http://localhost:8077/Services/ModuleAuth.svc?xsd=xsd2" />
+    <MetadataFile FileName="ModuleAuth42.xsd" MetadataType="Schema" ID="528e854f-c866-4859-b594-1d438a7decad" SourceId="1" SourceUrl="http://localhost:8077/Services/ModuleAuth.svc?xsd=xsd1" />
+    <MetadataFile FileName="ModuleAuth43.xsd" MetadataType="Schema" ID="0ecea8a8-b125-49c1-8bde-a28fc96dcbd7" SourceId="1" SourceUrl="http://localhost:8077/Services/ModuleAuth.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

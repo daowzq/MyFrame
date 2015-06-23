@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="FrameService.Services.ModuleAuth" CodeBehind="ModuleAuth.svc.cs" %>

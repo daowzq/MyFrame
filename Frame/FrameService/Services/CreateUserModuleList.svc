@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="FrameService.Services.CreateUserModuleList" CodeBehind="CreateUserModuleList.svc.cs" %>

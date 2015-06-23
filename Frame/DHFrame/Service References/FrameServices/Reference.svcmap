@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="120f9935-98cd-4be1-a0cc-b05e62948e51" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8077/Services/CreateUserModuleList.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CreateUserModuleList1.wsdl" MetadataType="Wsdl" ID="1e827427-210e-4bf4-b74a-7650e5658d26" SourceId="1" SourceUrl="http://localhost:8077/Services/CreateUserModuleList.svc?wsdl" />
+    <MetadataFile FileName="CreateUserModuleList1.disco" MetadataType="Disco" ID="0e8a0ad2-f727-48d5-8459-fa3fb4b133d6" SourceId="1" SourceUrl="http://localhost:8077/Services/CreateUserModuleList.svc?disco" />
+    <MetadataFile FileName="CreateUserModuleList1.xsd" MetadataType="Schema" ID="b7e418a0-d9e3-46c7-8b11-443f4fb07acd" SourceId="1" SourceUrl="http://localhost:8077/Services/CreateUserModuleList.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

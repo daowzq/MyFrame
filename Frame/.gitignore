@@ -1,0 +1,17 @@
+/DHFrame/bin
+Ext.Net.dll
+/DataModel/obj
+/DHFrame/*.config
+/DHFrame/Web.Debug.config
+/DHFrame/Web.Release.config
+/DHFrame/obj
+/CodeGen/CodeGenerator/Form1.cs
+Generated
+/Common/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/DynamicJson/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/HDFrame.v11.suo
+/Common/bin
+/DataModel/bin
+/CodeGen/CodeGenerator/bin/Debug/CodeGenerator.exe.config
+*.config
+/CodeGen/CodeGenerator/bin/Debug/CodeGenerator.vshost.exe.config

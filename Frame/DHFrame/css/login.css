@@ -1,0 +1,25 @@
+/* css reset */
+body,html,p,ul,li,ol{ margin:0; padding:0; font-size:12px; color:#333; list-style:none;}
+a,a:hover{color:#333; cursor:point; text-decoration:none;}
+img{border:none;}
+span,em,u,i,font{font-style:normal; font-size:12px;}
+h1,h2,h3,h4,h5,h6{ margin:0; padding:0; font-style:normal; }
+
+
+.block_login{ background:url(../images/block_login.png) no-repeat; height:974px; width:1063px; position:absolute; top:50%; left:50%; margin-left:-530px; margin-top:-485px;}
+.block_form{ float:right; margin-top:480px; margin-right:200px; width:375px; height:160px;}
+.form_user{ float:left; height:150px; width:265px;}
+.form_user table tr td{ color:#2b6d90; font-weight:bold; height:42px; font-family:'微软雅黑'; vertical-align:middle;}
+.form_user a{ color:#5d92ae; text-decoration:underline; cursor:pointer; font-weight:normal;}
+.form_user input{ border:#8faabd solid 1px; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px; height:20px; padding-left:2px; width:200px;}
+.form_button{ float:left; height:90px; width:90px;}
+.form_button input{background:url(../images/button_login.png) no-repeat; cursor:pointer; border:none; color:#fff; font-weight:bold; height:83px; line-height:28px; width:84px;}
+
+
+
+
+
+
+
+
+

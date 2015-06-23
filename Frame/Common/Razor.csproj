@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2D4CDFB-2816-44CB-A69B-5B2074CC17E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Razor</RootNamespace>
+    <AssemblyName>Razor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.ActiveRecord">
+      <HintPath>..\library\castleActive_Dbg3.5\Castle.ActiveRecord.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\library\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\library\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\library\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\library\castleActive_Dbg3.5\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp">
+      <HintPath>..\library\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBHelper\RazorIdentifierGenerator.cs" />
+    <Compile Include="DBHelper\DataHelper.cs" />
+    <Compile Include="DBHelper\EntityBase.cs" />
+    <Compile Include="DBHelper\EntityManager.cs" />
+    <Compile Include="DBHelper\HqlSearchCriterion.cs" />
+    <Compile Include="DBHelper\Other.cs" />
+    <Compile Include="DBHelper\SearchHelper.cs" />
+    <Compile Include="DBHelper\DataTableToPdf.cs" />
+    <Compile Include="StringChar\HexString.cs" />
+    <Compile Include="ImageOper\ImageHelper.cs" />
+    <Compile Include="Json\DynamicJson\DynamicJson.cs" />
+    <Compile Include="Json\DynamicJson\DynamicJsonConvert.cs" />
+    <Compile Include="Json\DynamicJson\DynamicJsonHelper.cs" />
+    <Compile Include="Json\DynamicJson\DynamicJsonType.cs" />
+    <Compile Include="MailHelper.cs" />
+    <Compile Include="Mongo\Connnection.cs" />
+    <Compile Include="Mongo\MongoBaseAction.cs" />
+    <Compile Include="OpenPop\Common\Logging\DefaultLogger.cs" />
+    <Compile Include="OpenPop\Common\Logging\DiagnosticsLogger.cs" />
+    <Compile Include="OpenPop\Common\Logging\FileLogger.cs" />
+    <Compile Include="OpenPop\Common\Logging\ILog.cs" />
+    <Compile Include="OpenPop\Common\StreamUtility.cs" />
+    <Compile Include="OpenPop\Mime\Decode\Base64.cs" />
+    <Compile Include="OpenPop\Mime\Decode\EncodedWord.cs" />
+    <Compile Include="OpenPop\Mime\Decode\QuotedPrintable.cs" />
+    <Compile Include="OpenPop\Mime\Decode\Rfc2231Decoder.cs" />
+    <Compile Include="OpenPop\Mime\Decode\Rfc2822DateTime.cs" />
+    <Compile Include="OpenPop\Mime\Decode\Utility.cs" />
+    <Compile Include="OpenPop\Mime\Header\ContentTransferEncoding.cs" />
+    <Compile Include="OpenPop\Mime\Header\HeaderExtractor.cs" />
+    <Compile Include="OpenPop\Mime\Header\HeaderFieldParser.cs" />
+    <Compile Include="OpenPop\Mime\Header\MessageHeader.cs" />
+    <Compile Include="OpenPop\Mime\Header\RfcMailAddress.cs" />
+    <Compile Include="OpenPop\Mime\Message.cs" />
+    <Compile Include="OpenPop\Mime\MessagePart.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\AnswerMessageTraverser.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\AttachmentFinder.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\FindAllMessagePartsWithMediaType.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\FindFirstMessagePartWithMediaType.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\IAnswerMessageTraverser.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\IQuestionAnswerMessageTraverser.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\MultipleMessagePartFinder.cs" />
+    <Compile Include="OpenPop\Mime\Traverse\TextVersionFinder.cs" />
+    <Compile Include="OpenPop\Pop3\Apop.cs" />
+    <Compile Include="OpenPop\Pop3\AuthenticationMethod.cs" />
+    <Compile Include="OpenPop\Pop3\ConnectionState.cs" />
+    <Compile Include="OpenPop\Pop3\CramMd5.cs" />
+    <Compile Include="OpenPop\Pop3\Disposable.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\InvalidLoginException.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\InvalidUseException.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\LoginDelayException.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\PopClientException.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\PopServerException.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\PopServerLockedException.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\PopServerNotAvailableException.cs" />
+    <Compile Include="OpenPop\Pop3\Exceptions\PopServerNotFoundException.cs" />
+    <Compile Include="OpenPop\Pop3\Pop3Client.cs" />
+    <Compile Include="OpenSmtp\Attachment.cs" />
+    <Compile Include="OpenSmtp\EmailAddress.cs" />
+    <Compile Include="OpenSmtp\Log.cs" />
+    <Compile Include="OpenSmtp\MailEncoder.cs" />
+    <Compile Include="OpenSmtp\MailHeader.cs" />
+    <Compile Include="OpenSmtp\MailMessage.cs" />
+    <Compile Include="OpenSmtp\MailPriority.cs" />
+    <Compile Include="OpenSmtp\MalformedAddressException.cs" />
+    <Compile Include="OpenSmtp\ParseException.cs" />
+    <Compile Include="OpenSmtp\ReplyConstants.cs" />
+    <Compile Include="OpenSmtp\Smtp.cs" />
+    <Compile Include="OpenSmtp\SmtpConfig.cs" />
+    <Compile Include="OpenSmtp\SmtpException.cs" />
+    <Compile Include="Razor.cs" />
+    <Compile Include="SecurityHelper.cs" />
+    <Compile Include="Serializer\Serializer.cs" />
+    <Compile Include="Serializer\FileSerializer.cs" />
+    <Compile Include="StringChar\StringHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysDiagnose.cs" />
+    <Compile Include="SysInfoHelper.cs" />
+    <Compile Include="XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenSmtp\makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Log\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
